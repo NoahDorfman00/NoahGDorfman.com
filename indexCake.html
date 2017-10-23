@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>The Noah Dorfman Project</title>
+    <link rel="stylesheet" 
+    href="styles/style.css">
+	<script>
+	function openWinHome() {
+	   window.location.href = "index.html";
+	}
+	function openWinProject() {
+	   window.location.href = "indexProject.html";
+	}
+	function openWinRecommend() {
+	   window.location.href = "indexRecommend.html";
+	}
+	function openWinContact() {
+	   window.location.href = "indexContact.html";
+	}
+	function openWinDrone() {
+	   window.location.href = "indexDrone.html";
+	}
+	function openWinPrinter() {
+	   window.location.href = "indexPrinter.html";
+	}
+	function openWinCake() {
+	   window.location.href = "indexCake.html";
+	}
+	function openWinMorse() {
+	   window.location.href = "indexMorse.html";
+	}
+	function openWinEscape() {
+	   window.location.href = "indexEscape.html";
+	}
+	function openWinMaker() {
+	   window.location.href = "indexMaker.html";
+	}
+	
+	/*slideshow*/
+	var slideIndex = 1;
+	showPic(slideIndex);
+
+	function nextPic(n) {
+		showPic(slideIndex += n);
+	}
+
+	function showPic(n) {
+	
+		var i;
+		
+		var x = document.getElementsByClassName("slides");
+		var y = document.getElementsByClassName("captions");
+		var z = document.getElementsByClassName("statements");
+		
+		for (i = 0; i < x.length; i++){
+			x[i].style.display = "none";
+			y[i].style.display = "none";
+			z[i].style.display = "none";			
+		}
+		
+		if (n > x.length){
+			slideIndex = 1
+		}		
+		
+		if (n < 1){
+			slideIndex = x.length
+		}
+		
+		x[slideIndex-1].style.display = "block";
+		y[slideIndex-1].style.display = "inline-block";
+		z[slideIndex-1].style.display = "inline-block";
+	}
+	
+	</script>
+  </head>
+  <body onload="showPic(1)">
+   <div class="header">
+		<h1 align="center">"Hello World!"</h1>
+		<ul>
+			<li><input class= "button" target="home" type="button" value="Home" onclick="openWinHome()"></li>
+			<div class="dropdown">
+				<li><input class= "button dropbtn" target="proj" type="button" value="Projects" onclick="openWinProject()"></li>
+				<div class="dropdown-content">
+					<input class="button" target="drone" type="button" value="Quadcopter" onclick="openWinDrone()">
+					<input class="button" target="printer" type="button" value="3-D Printer" onclick="openWinPrinter()">
+					<input class="disable" target="cake" type="button" value="Galaxy Cake">
+					<input class="button" target="morse" type="button" value="RPi Morse Code" onclick="openWinMorse()">
+					<input class="button" target="escape" type="button" value="Escape Room" onclick="openWinEscape()">
+				</div>
+			</div>
+			<li><input class="button" target="maker" type="button" value="Maker Faire Edit" onclick="openWinMaker()"></li>
+			<li><input class= "button" target="rec" type="button" value="Recommendations" onclick="openWinRecommend()"></li>
+			<li><input class= "button" target="cont" type="button" value="Me" onclick="openWinContact()"></li>
+		</ul>
+	</div>
+	<center>	
+		<div class="captioncontainer">
+			<p class="captions">Mirror Glaze Galaxy Cake With<br/>
+								Chocolate Chip Cookie Dough Filling</p>
+			<p class="captions">Galaxy Themed<br/>
+								Mirror Glaze</p>
+			<p class="captions">Painting the Galaxy<br/>
+								with Stars and Final Touches</p>
+			<p class="captions">Happy 17th<br/>
+								Birthday to Me</p>
+			<p class="captions">Blowing Out My Candles<br/>
+								with My Great Grandfather</p>
+		</div>
+		<div class="statementcontainer">
+			<p class="statements">The cake is built on a basic vanilla batter<br/>
+								  recipe. It is held together with homemade,<br/>
+								  eggless chocalate chip cookie dough filling.<br/>
+								  The layers were colored with blue and purle<br/>
+								  edible food coloring to match the theme.</p>
+			<p class="statements">The glaze is made with a mixture of white chocolate,<br/>
+								  corn syrup, condensed milk, and gelatin to give<br/>
+								  the desired mirror effect. The glaze was separated<br/>
+								  and dyed five different colors.</p>
+			<p class="statements">The mirror glazes were poured on incrementally and swirled<br/>
+								  to give a galactic effect. Black disco dust was<br/>
+								  sprinkled on to resemble small stars. Finally, larger stars<br/>
+								  and constellations were piped on using vanilla buttercream.</p>
+			<p class="statements">The cake was brought to Sunday dinner<br/>
+								  to share with family and friends.<br/>
+								  The addition of color flame candles<br/>
+								  illuminated the celebration.</p>
+			<p class="statements">My 92 year-old PopPop, "The Original Engineer",<br/>
+								  and inspiration in my life helped me<br/>
+								  wish for another successful year in the<br/>
+								  workshop.</p>
+		</div>
+		<div class="slidecontainer">
+			<img class="short slides" src="images/cake/cake1.jpg">
+			<img class="short slides" src="images/cake/cake2.jpg">
+			<img class="tall slides" src="images/cake/cake3.jpg">
+			<img class="tall slides" src="images/cake/cake4.jpg">
+			<img class="tall slides" src="images/cake/cake5.jpg">
+			<input class="button left" type="button" value="<" onclick="nextPic(-1)">
+			<input class="button right" type="button" value=">" onclick="nextPic(1)">
+		</div>
+	</center>
+   </body>
+
+</html>
