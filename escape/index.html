@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>The Noah Dorfman Project - Escape</title>
+    <link rel="stylesheet" 
+	href="../styles/style.css">
+	<script>
+	function openWinHome() {
+	   window.location.href = "../index.html";
+	}
+	function openWinProject() {
+	   window.location.href = "../project/index.html";
+	}
+	function openWinRecommend() {
+	   window.location.href = "../recommend/index.html";
+	}
+	function openWinContact() {
+	   window.location.href = "../contact/index.html";
+	}
+	function openWinDrone() {
+	   window.location.href = "../drone/index.html";
+	}
+	function openWinPrinter() {
+	   window.location.href = "../printer/index.html";
+	}
+	function openWinCake() {
+	   window.location.href = "../cake/index.html";
+	}
+	function openWinMorse() {
+	   window.location.href = "../morse/index.html";
+	}
+	function openWinEscape() {
+	   window.location.href = "../escape/index.html";
+	}
+	function openWinMaker() {
+	   window.location.href = "../maker/index.html";
+	}
+	
+	/*slideshow*/
+	var slideIndex = 1;
+	showPic(slideIndex);
+
+	function nextPic(n) {
+		showPic(slideIndex += n);
+	}
+
+	function showPic(n) {
+	
+		var i;
+		
+		var x = document.getElementsByClassName("slides");
+		var y = document.getElementsByClassName("captions");
+		var z = document.getElementsByClassName("statements");
+		
+		for (i = 0; i < x.length; i++){
+			x[i].style.display = "none";
+			y[i].style.display = "none";
+			z[i].style.display = "none";			
+		}
+		
+		if (n > x.length){
+			slideIndex = 1
+		}		
+		
+		if (n < 1){
+			slideIndex = x.length
+		}
+		
+		x[slideIndex-1].style.display = "block";
+		y[slideIndex-1].style.display = "inline-block";
+		z[slideIndex-1].style.display = "inline-block";
+	}
+	
+	</script>
+  </head>
+  <body onload="showPic(1)">
+   <div class="header">
+		<h1 align="center">"Hello World!"</h1>
+		<ul>
+			<li><input class= "button" target="home" type="button" value="Home" onclick="openWinHome()"></li>
+			<div class="dropdown">
+				<li><input class= "button dropbtn" target="proj" type="button" value="Projects" onclick="openWinProject()"></li>
+				<div class="dropdown-content">
+					<input class="button" target="drone" type="button" value="Quadcopter" onclick="openWinDrone()">
+					<input class="button" target="printer" type="button" value="3-D Printer" onclick="openWinPrinter()">
+					<input class="button" target="cake" type="button" value="Galaxy Cake" onclick="openWinCake()">
+					<input class="button" target="morse" type="button" value="RPi Morse Code" onclick="openWinMorse()">
+					<input class="disable" target="escape" type="button" value="Escape Room">
+				</div>
+			</div>
+			<li><input class="button" target="maker" type="button" value="Maker Faire Edit" onclick="openWinMaker()"></li>
+			<li><input class= "button" target="rec" type="button" value="Recommendations" onclick="openWinRecommend()"></li>
+			<li><input class= "button" target="cont" type="button" value="Me" onclick="openWinContact()"></li>
+		</ul>
+	</div>
+	<center>	
+		<div class="captioncontainer">
+			<p class="captions">Escape Room<br/>
+								South Jersey</p>
+			<p class="captions">Demonstrating a Pull-Down<br/>
+								Circuit at the Escape Room</p>
+			<p class="captions">Producing Permanent<br/>
+								Pull-Down Circuits</p>
+			<p class="captions">Buttons and Sensors<br/>
+								Connected to Arduino</p>
+			<p class="captions">Arduino Software<br/>
+								Developed By Noah Dorfman</p>
+			<p class="captions">Ben Franklin's Workshop<br/>
+								Printing Press Puzzle</p>
+			<p class="captions">Jersey Devil's Cabin<br/>
+								Start Sensor</p>
+			<p class="captions">Electronic Puzzle<br/>
+								Montage</p>
+		</div>
+		<div class="statementcontainer">
+			<p class="statements">While in the Glassboro Public  library maker<br/>
+								  space, I met the owners of Escape Room South<br/>
+								  Jersey who were having multiple electronic<br/>
+								  challenges regarding circuitry. After a brief<br/>
+								  conversation, I was asked to join the team.</p>
+			<p class="statements">This is the primary circuit I was brought on board to build.<br/>
+								  A button pull-down circuit is used to regulate inputs<br/>
+								  solely to on and off signals. This simple circuit<br/>
+								  is the cornerstone of all the work I have done for the escape room.</p>
+			<p class="statements">Throughout my time at Escape Room South Jersey, I have built<br/>
+								  in excess of 20 of these pull-down circuits to connect puzzle<br/>
+								  sensors to the Escape Room Master Program. This task<br/>
+								  has greatly refined my soldering skills.</p>
+			<p class="statements">For various puzzles, certain sensors are<br/>
+								  used to advance through the escape room game.<br/>
+								  These sensors transmit electrical data through the circuit<br/>
+								  to the Arduino microcontroller to manipulate software.</p>
+			<p class="statements">Reading the input data from Arduino's I/O pins<br/>
+								  the custom developed software wirelessly communicates<br/>
+								  commands to the Escape Room Master program.<br/>
+								  These commands trigger events in the game.</p>
+			<p class="statements">For example: the printing press combinational<br/>
+								  lock uses the input of four buttons in a specific<br/>
+								  order to trigger a solenoid lock. This opens<br/>
+								  a hatch to reveal a key for the next puzzle.</p>
+			<p class="statements">Additional example: each room uses a Reed switch<br/>
+								  to activate the commencement sequence for the game.<br/>
+								  Pictured here, the Jersey Devil's Cabin room<br/>
+								  start switch is tucked into the facade.</p>
+			<p class="statements">In this short clip, demonstrations of several switch<br/>
+								  implementations are shown. Franklin's Workshop Printing<br/>
+								  Press Lock as well as End Switch, and Jersey Devil's Cabin<br/>
+								  Start Switch as well as End Idol Construction Puzzle.</p>
+		</div>
+		<div class="slidecontainer">
+			<img class="tall slides" src="../images/escape/escape1.jpg">
+			<img class="tall slides" src="../images/escape/escape2.jpg">
+			<img class="tall slides" src="../images/escape/escape3.jpg">
+			<img class="short slides" src="../images/escape/escape4.jpg">
+			<img class="short slides" src="../images/escape/escape7.JPG">
+			<img class="short slides" src="../images/escape/escape5.png">
+			<img class="tall slides" src="../images/escape/escape6.jpg">
+			<iframe width="450" height="337.5" class="short slides" src="https://www.youtube.com/embed/KNN6wi8OklU?rel=0" frameborder="0" allowfullscreen></iframe>
+			<input class="button left" type="button" value="<" onclick="nextPic(-1)">
+			<input class="button right" type="button" value=">" onclick="nextPic(1)">
+		</div>
+	</center>
+   </body>
+
+</html>

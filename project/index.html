@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>The Noah Dorfman Project - Projects</title>
+    <link rel="stylesheet" 
+    href="../styles/style.css">
+	<script>
+	function openWinHome() {
+	   window.location.href = "../index.html";
+	}
+	function openWinProject() {
+	   window.location.href = "../project/index.html";
+	}
+	function openWinRecommend() {
+	   window.location.href = "../recommend/index.html";
+	}
+	function openWinContact() {
+	   window.location.href = "../contact/index.html";
+	}
+	function openWinDrone() {
+	   window.location.href = "../drone/index.html";
+	}
+	function openWinPrinter() {
+	   window.location.href = "../printer/index.html";
+	}
+	function openWinCake() {
+	   window.location.href = "../cake/index.html";
+	}
+	function openWinMorse() {
+	   window.location.href = "../morse/index.html";
+	}
+	function openWinEscape() {
+	   window.location.href = "../escape/index.html";
+	}
+	function openWinMaker() {
+	   window.location.href = "../maker/index.html";
+	}
+	</script>
+  </head>
+  <body>
+   <div class="header">
+		<h1 align="center">"Hello World!"</h1>
+		<ul>
+			<li><input class= "button" target="home" type="button" value="Home" onclick="openWinHome()"></li>
+			<li><input class= "disable dropbtn" target="proj" type="button" value="Projects"></li>
+			<li><input class="button" target="maker" type="button" value="Maker Faire Edit" onclick="openWinMaker()"></li>
+			<li><input class= "button" target="rec" type="button" value="Recommendations" onclick="openWinRecommend()"></li>
+			<li><input class= "button" target="cont" type="button" value="Me" onclick="openWinContact()"></li>
+		</ul>
+		<center>
+			<div class="projcontainer">
+				<div class="dronecontainer container">
+					<img class="drone cover" src="../images/drone/dronecover.jpg" alt="dronecover" />
+					<input class="drone projects" target="cont" type="button" value="Quadcopter" onclick="openWinDrone()">
+				</div>
+				<div class="escapecontainer container">
+					<img class="escape cover" src="../images/escape/escapecover.jpg" alt="escapecover" />
+					<input class="escape projects"  target="cont" type="button" value="Escape Room" onclick="openWinEscape()">
+				</div>
+				<div class="printercontainer container">
+					<img class="printer cover" src="../images/printer/printercover.jpg" alt="printercover" />
+					<input class="printer projects"  target="cont" type="button" value="3-D Printer" onclick="openWinPrinter()">
+				</div>
+				<div class="cakecontainer container">
+					<img class="cake cover" src="../images/cake/cakecover.jpg" alt="cakecover" />
+					<input class="cake projects"  target="cont" type="button" value="Galaxy Cake" onclick="openWinCake()">
+				</div>
+				<div class="morsecontainer container">
+					<img class="morse cover" src="../images/morse/morsecover.jpg" alt="morsecover" />
+					<input class="morse projects"  target="cont" type="button" value="RPi Morse Code" onclick="openWinMorse()">
+				</div>
+			</div>
+			<div class="projspacer">
+			</div>
+		</center>
+	</div>
+   </body>
+
+</html>

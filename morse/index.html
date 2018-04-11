@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>The Noah Dorfman Project - Morse</title>
+    <link rel="stylesheet" 
+    href="../styles/style.css">
+	<script>
+	function openWinHome() {
+	   window.location.href = "../index.html";
+	}
+	function openWinProject() {
+	   window.location.href = "../project/index.html";
+	}
+	function openWinRecommend() {
+	   window.location.href = "../recommend/index.html";
+	}
+	function openWinContact() {
+	   window.location.href = "../contact/index.html";
+	}
+	function openWinDrone() {
+	   window.location.href = "../drone/index.html";
+	}
+	function openWinPrinter() {
+	   window.location.href = "../printer/index.html";
+	}
+	function openWinCake() {
+	   window.location.href = "../cake/index.html";
+	}
+	function openWinMorse() {
+	   window.location.href = "../morse/index.html";
+	}
+	function openWinEscape() {
+	   window.location.href = "../escape/index.html";
+	}
+	function openWinMaker() {
+	   window.location.href = "../maker/index.html";
+	}
+	
+	/*slideshow*/
+	var slideIndex = 1;
+	showPic(slideIndex);
+
+	function nextPic(n) {
+		showPic(slideIndex += n);
+	}
+
+	function showPic(n) {
+	
+		var i;
+		
+		var x = document.getElementsByClassName("slides");
+		var y = document.getElementsByClassName("captions");
+		var z = document.getElementsByClassName("statements");
+		
+		for (i = 0; i < x.length; i++){
+			x[i].style.display = "none";
+			y[i].style.display = "none";
+			z[i].style.display = "none";			
+		}
+		
+		if (n > x.length){
+			slideIndex = 1
+		}		
+		
+		if (n < 1){
+			slideIndex = x.length
+		}
+		
+		x[slideIndex-1].style.display = "block";
+		y[slideIndex-1].style.display = "inline-block";
+		z[slideIndex-1].style.display = "inline-block";
+	}
+	
+	</script>
+  </head>
+  <body onload="showPic(1)">
+   <div class="header">
+		<h1 align="center">"Hello World!"</h1>
+		<ul>
+			<li><input class= "button" target="home" type="button" value="Home" onclick="openWinHome()"></li>
+			<div class="dropdown">
+				<li><input class= "button dropbtn" target="proj" type="button" value="Projects" onclick="openWinProject()"></li>
+				<div class="dropdown-content">
+					<input class="button" target="drone" type="button" value="Quadcopter" onclick="openWinDrone()">
+					<input class="button" target="printer" type="button" value="3-D Printer" onclick="openWinPrinter()">
+					<input class="button" target="cake" type="button" value="Galaxy Cake" onclick="openWinCake()">
+					<input class="disable" target="morse" type="button" value="RPi Morse Code">
+					<input class="button" target="escape" type="button" value="Escape Room" onclick="openWinEscape()">
+				</div>
+			</div>
+			<li><input class="button" target="maker" type="button" value="Maker Faire Edit" onclick="openWinMaker()"></li>
+			<li><input class= "button" target="rec" type="button" value="Recommendations" onclick="openWinRecommend()"></li>
+			<li><input class= "button" target="cont" type="button" value="Me" onclick="openWinContact()"></li>
+		</ul>
+	</div>
+	<center>	
+		<div class="captioncontainer">
+			<p class="captions">Glassboro West Jersey Depot<br/>
+								and the Telegraph</p>
+			<p class="captions">A Modern Twist on an<br/>
+								Old Classic</p>
+			<p class="captions">Connecting the Two<br/>
+								Devices Efficiently</p>
+			<p class="captions">Preserving<br/>
+								History</p>
+			<p class="captions">Schematic of the the Top<br/>
+								of the Desk at each Telegraph Station</p>
+			<p class="captions">Inside the Desk<br/>
+								Schematic</p>
+			<p class="captions">Planning<br/>
+								the Budget</p>
+			<p class="captions">Learning to Build<br/>
+								a Pull-Down Circuit</p>
+			<p class="captions">Producing Custom<br/>
+								Pull-Down Circuit Boards</p>
+			<p class="captions">Keeping Morse<br/>
+								Code Tradition</p>
+			<p class="captions">Beta Version of the Morse<br/>
+								Code Translation Software</p>
+			<p class="captions">Functioning Algorithm<br/>
+								with Tweaked Timings</p>
+			<p class="captions">"Final" Build Being<br/>
+								Configured for Two Machines</p>
+			<p class="captions">Ready for Museum<br/>
+								Installation</p>
+		</div>
+		<div class="statementcontainer">
+			<p class="statements">Glassboro Historical Society has recently renovated<br/>
+								  the West Jersey Train Depot into a museum for<br/>
+								  Glassboro's history with trains. The museum contains<br/>
+								  information and artifacts from an era when the station<br/>
+								  functioned. The museum has an original telegraph from the 1800's.</p>
+			<p class="statements">The historical society imagined a device to make learning,<br/>
+								  the lost language of Morse Code, easier for the populus.<br/>
+								  After tinkering with the machine a solution was<br/>
+								  developed to break down the learning barrier.</p>
+			<p class="statements">In the original plans, using Wi-Fi seemed like the best<br/>
+								  solution to connect two digital devices in separate rooms.<br/>
+								  Over the course of development, method of connectivity<br/>
+								  transitioned from Wi-Fi, to Bluetooth, and finally using<br/>
+								  a direct wire between the two devices.</p>
+			<p class="statements">Another challenge was reading a morse code signal<br/>
+								  without tampering with the original circuitry of the telegraph.<br/>
+								  The issue was circumnavigated using an external, digital button<br/>
+								  that the telegraph's arm could press as it performs its usual task.</p>
+			<p class="statements">Each station would have a tactile button under the telegraph's<br/>
+								  arm. Its wiring would be run under the desk to the 'brain' of<br/>
+								  the system. A monitor for displaying a translation of Morse Code<br/>
+								  to text would sit on the desk with an HDMI cord run underneath.</p>
+			<p class="statements">Under each station, a Raspberry Pi 3 was used to control the<br/>
+								  system. A pull-down circuit was constructed to regulate button<br/>
+								  presses before entering the interfacing pins on the Raspberry<br/>
+								  Pi. The HDMI cord and button wires were run up to the top level.</p>
+			<p class="statements">After designing the build with historical society<br/>
+								  approval, a budget was drafted to present to the committee.<br/>
+								  Not only practical for the scope, the preliminary budget<br/>
+								  was approved as an efficient use of money by the society.</p>
+			<p class="statements">To incorporate the tactile button, I taught myself<br/>
+								  to build a pull-down circuit using an Arduino microcontroller.<br/>
+								  The pull-down circuit regulates button presses to only<br/>
+								  provide an on and off signal, no "medium signals".</p>
+			<p class="statements">Finally, it was time to begin building and coding.<br>
+								  At this stage, it was decided to make one machine<br/>
+								  the "sender" and one the "reciever". This simplified<br/>
+								  the build for users and for the developer. The circuits<br/>
+								  were soldered and plugged into the Raspberry Pi.<p/>
+			<p class="statements">Keeping the theme of maintaining historic value,<br/>
+								  the historic society's morse code expert explained<br/>
+								  the timing of Morse Code and how to properly send<br/>
+								  messages. This data was incorporated in the algorithm.</p>
+			<p class="statements">Using a personally owned Raspberry Pi, the Python based<br/>
+								  software was built into a functioning beta.<br/>
+								  Taking button presses as input and displaying<br/>
+								  translated text.</p>
+			<p class="statements">After the beta version was presented to the historic<br/>
+								  society, the button press timescale needed adjusting.<br/>
+								  A new version of the build with proper timing and a<br/>
+								  more descriptive display is shown in action.</p>
+			<p class="statements">A user interface and socket connection script were<br/>
+								  added to the build. Finally, the machines were ready<br/>
+								  for connectivity between each other. Though, the build was<br/>
+								  "finalized", it will be improved upon in the near future.</p>
+			<p class="statements">Using a "crossed" ethernet connection between the two<br/>
+								  devices. Data could be transmitted fluently.<br/>
+								  The final tests prevailed in an identical configuration<br/>
+								  to the real setup in the museum.</p>
+		</div>
+		<div class="slidecontainer">
+			<img class="short slides" src="../images/morse/morse1.JPG">
+			<img class="tall slides" src="../images/morse/morse2.JPG">
+			<img class="short slides" src="../images/morse/morse3.JPG">
+			<img class="tall slides" src="../images/morse/morse4.JPG">
+			<img class="short slides" src="../images/morse/morse5.JPG">
+			<img class="short slides" src="../images/morse/morse6.JPG">
+			<img class="short slides" src="../images/morse/morse8.JPG">
+			<img class="tall slides" src="../images/morse/morse9.jpg">
+			<img class="short slides" src="../images/morse/morse10.jpg">
+			<img class="tall slides" src="../images/morse/morse11.jpg">
+			<img class="short slides" src="../images/morse/morse12.jpg">
+			<iframe width="450" height="337.5" class="short slides" src="https://www.youtube.com/embed/lAbXgKH4BKY?rel=0" frameborder="0" allowfullscreen></iframe>
+			<img class="short slides" src="../images/morse/morse13.JPG">
+			<img class="short slides" src="../images/morse/morse14.JPG">
+			<input class="button left" type="button" value="<" onclick="nextPic(-1)">
+			<input class="button right" type="button" value=">" onclick="nextPic(1)">
+		</div>
+	</center>
+   </body>
+
+</html>

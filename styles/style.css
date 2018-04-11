@@ -111,6 +111,15 @@ h5 {
 	box-shadow: 50px 50px 100px 0 black inset, -50px -50px 100px 0 black inset;
 }
 
+.shadowblast { 
+	position: absolute; 
+	top: 0px; 
+	left: 0;
+	width: 100%;
+	height: 100%;
+	box-shadow: 50px 50px 100px 0 black inset, -50px -50px 80px 0 black inset;
+}
+
 /*UI*/
 
 ul {
@@ -154,6 +163,12 @@ li input{
 	color:white;
 	background-color: #004660;
 	border: 3px solid #004660;
+}
+
+.buttonblast:hover {
+	color:white;
+	background-color: #601B1D;
+	border: 3px solid #601B1D;
 }
 
 .dropdown-content {
