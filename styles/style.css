@@ -394,12 +394,17 @@ input.printer{
 	background-color: #a1a3a1;
 	color: black;
 	border: 3px solid #a1a3a1;
+	font-family: courier;
+	font-size: 15px;
+	outline: none;
 }
 
 .nameText {
 	background-color: #a1a3a1;
 	color: black;
 	border: 3px solid #a1a3a1;
+	font-family: courier;
+	outline: none;
 }
 
 .rsvpRadio:after {
@@ -414,6 +419,7 @@ input.printer{
 	display: inline-block;
 	visibility: visible;
 	border: 2px solid #a1a3a1;
+	font-family: courier;
 }
 
 .rsvpRadio:checked:after {
@@ -428,8 +434,10 @@ input.printer{
 	display: inline-block;
 	visibility: visible;
 	border: 2px solid #a1a3a1;
+	font-family: courier;
 }
 
 .rsvpLabel {
 	color: #a1a3a1;
+	font-family: courier;
 }

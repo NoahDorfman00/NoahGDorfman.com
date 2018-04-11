@@ -5,7 +5,41 @@
     <title>Blast Off!</title>
     <link rel="stylesheet" 
 	href="../styles/style.css">
+	<script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
 	<script>
+	// Initialize Firebase
+	var config = {
+    apiKey: "AIzaSyCHAGlFcD8WzHbEDeTmb6BOZ7XHGAEZB2E",
+    authDomain: "grad-party-rsvp.firebaseapp.com",
+    databaseURL: "https://grad-party-rsvp.firebaseio.com",
+    projectId: "grad-party-rsvp",
+    storageBucket: "",
+    messagingSenderId: "1029606656078"
+	};
+	firebase.initializeApp(config);
+	</script>
+	
+	<script>
+	function rsvpSubmit() {
+		var name = document.getElementById("name").value;
+		var form_elements = document.getElementById("rsvpForm").elements;
+		var rsvpAnswer = form_elements['rsvp'].value;
+		
+		if (name == "" || rsvpAnswer == "")
+		{
+			window.alert("Not a valid response!");
+		}
+		else
+		{
+			var firebaseRef = firebase.database().ref();
+			firebaseRef.child(name).set(rsvpAnswer);
+			window.alert(name + ": " + rsvpAnswer);
+		}
+		rsvpForm.reset();
+		
+		
+	}
+	
 	function openWinHome() {
 	   window.location.href = "../";
 	}
@@ -31,37 +65,23 @@
 	</div>
 	
 	<div>
-	<form>
+	<form id="rsvpForm">
 		Name:<br>
-		<input class="nameText" type="text" placeholder="Enter your name..."></input>
+		<input id="name" class="nameText" type="text" placeholder="Enter your name..."></input>
 		<br/>
 		<br/>
 		<label class="rsvpLabel"><b>Will you be in attendance?</b></label>
 		<br/>
-		<input class="rsvpRadio" type="radio" name="rsvp" value="YES"> 
+		<input id="radioY" class="rsvpRadio" type="radio" name="rsvp" value="YES"> 
 		<label class="rsvpLabel"><b>YES</b></label>
-		<input class="rsvpRadio" type="radio" name="rsvp" value="NO">
+		<input id="radioN" class="rsvpRadio" type="radio" name="rsvp" value="NO">
 		<label class="rsvpLabel"><b>NO</b></label>
+		<br/>
+		<br/>
+		<input class= "buttonblast" target="submit" type="button" value="Submit" onclick="rsvpSubmit()">
 	</form>
 	</div>
 	
    </center>
    </body>
-   <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
-	<script>
-	// Initialize Firebase
-	var config = {
-    apiKey: "AIzaSyCHAGlFcD8WzHbEDeTmb6BOZ7XHGAEZB2E",
-    authDomain: "grad-party-rsvp.firebaseapp.com",
-    databaseURL: "https://grad-party-rsvp.firebaseio.com",
-    projectId: "grad-party-rsvp",
-    storageBucket: "",
-    messagingSenderId: "1029606656078"
-	};
-	firebase.initializeApp(config);
-	</script>
-	
-	<script>
-	</script>
-
 </html>
