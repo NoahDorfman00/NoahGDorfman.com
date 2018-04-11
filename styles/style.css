@@ -154,6 +154,11 @@ li input{
 	color: black;
 	border: 3px solid #a1a3a1;
 }
+.buttonblast {
+	background-color: #a1a3a1;
+	color: black;
+	border: 3px solid #a1a3a1;
+}
 
 .button:focus{
 	outline: none;
