@@ -111,15 +111,6 @@ h5 {
 	box-shadow: 50px 50px 100px 0 black inset, -50px -50px 100px 0 black inset;
 }
 
-.shadowblast { 
-	position: absolute; 
-	top: 0px; 
-	left: 0;
-	width: 100%;
-	height: 100%;
-	box-shadow: 50px 50px 100px 0 black inset, -50px -50px 80px 0 black inset;
-}
-
 /*UI*/
 
 ul {
@@ -154,11 +145,6 @@ li input{
 	color: black;
 	border: 3px solid #a1a3a1;
 }
-.buttonblast {
-	background-color: #a1a3a1;
-	color: black;
-	border: 3px solid #a1a3a1;
-}
 
 .button:focus{
 	outline: none;
@@ -168,12 +154,6 @@ li input{
 	color:white;
 	background-color: #004660;
 	border: 3px solid #004660;
-}
-
-.buttonblast:hover {
-	color:white;
-	background-color: #601B1D;
-	border: 3px solid #601B1D;
 }
 
 .dropdown-content {
@@ -392,4 +372,64 @@ input.printer{
 	right:0;
 	opacity:0.75;
 	font-size: 20px;
+}
+
+/*Blastoff*/
+.buttonblast:hover {
+	color:white;
+	background-color: #601B1D;
+	border: 3px solid #601B1D;
+}
+
+.shadowblast { 
+	position: absolute; 
+	top: 0px; 
+	left: 0;
+	width: 100%;
+	height: 100%;
+	box-shadow: 50px 50px 100px 0 black inset, -50px -50px 80px 0 black inset;
+}
+
+.buttonblast {
+	background-color: #a1a3a1;
+	color: black;
+	border: 3px solid #a1a3a1;
+}
+
+.nameText {
+	background-color: #a1a3a1;
+	color: black;
+	border: 3px solid #a1a3a1;
+}
+
+.rsvpRadio:after {
+	width: 15px;
+    height: 15px;
+	border-radius: 15px;
+	top: -2px;
+	left: -1px;
+	position: relative;
+	background-color: #a1a3a1;
+	content: '';
+	display: inline-block;
+	visibility: visible;
+	border: 2px solid #a1a3a1;
+}
+
+.rsvpRadio:checked:after {
+	width: 15px;
+	height: 15px;
+	border-radius: 15px;
+	top: -2px;
+	left: -1px;
+	position: relative;
+	background-color: #601B1D;
+	content: '';
+	display: inline-block;
+	visibility: visible;
+	border: 2px solid #a1a3a1;
+}
+
+.rsvpLabel {
+	color: #a1a3a1;
 }

@@ -16,7 +16,7 @@
 		<source src="../audio/mars.mp3" type="audio/mpeg">
 	</audio>
 	<div class="header">
-		<h2 align="center">"Hello World!"</h2>
+		<h2 align="center">Blast Off!</h2>
 		<ul>
 			<li><input class= "buttonblast" target="home" type="button" value="Check out my personal webpage!" onclick="openWinHome()"></li>
 		</ul>
@@ -29,7 +29,39 @@
 	  <div class="shadowblast">
 	  </div>
 	</div>
+	
+	<div>
+	<form>
+		Name:<br>
+		<input class="nameText" type="text" placeholder="Enter your name..."></input>
+		<br/>
+		<br/>
+		<label class="rsvpLabel"><b>Will you be in attendance?</b></label>
+		<br/>
+		<input class="rsvpRadio" type="radio" name="rsvp" value="YES"> 
+		<label class="rsvpLabel"><b>YES</b></label>
+		<input class="rsvpRadio" type="radio" name="rsvp" value="NO">
+		<label class="rsvpLabel"><b>NO</b></label>
+	</form>
+	</div>
+	
    </center>
    </body>
+   <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+	<script>
+	// Initialize Firebase
+	var config = {
+    apiKey: "AIzaSyCHAGlFcD8WzHbEDeTmb6BOZ7XHGAEZB2E",
+    authDomain: "grad-party-rsvp.firebaseapp.com",
+    databaseURL: "https://grad-party-rsvp.firebaseio.com",
+    projectId: "grad-party-rsvp",
+    storageBucket: "",
+    messagingSenderId: "1029606656078"
+	};
+	firebase.initializeApp(config);
+	</script>
+	
+	<script>
+	</script>
 
 </html>
