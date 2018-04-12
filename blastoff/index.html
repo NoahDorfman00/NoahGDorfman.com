@@ -19,13 +19,24 @@
 	firebase.initializeApp(config);
 	</script>
 	
-	<script>	
+	<script>
+	var rsvpRef = firebase.database().ref();
+	rsvpRef.on("value",function(snapshot) {
+		var headcount = 0;
+		snapshot.forEach(function(childSnapshot) {
+			var obj = childSnapshot.val();
+			if(obj == "YES")
+			{
+				headcount++;
+			}
+		});
+		rsvpRef.child("0 Headcount").set(headcount);
+	});
+	
 	function rsvpSubmit() {
 		var name = document.getElementById("name").value;
 		var form_elements = document.getElementById("rsvpForm").elements;
 		var rsvpAnswer = form_elements['rsvp'].value;
-		var rsvpRef = firebase.database().ref();
-		var headcount = 0;
 		
 		if (name == "" || rsvpAnswer == "")
 		{
@@ -42,17 +53,6 @@
 			rsvpRef.child(name).set(rsvpAnswer);
 			window.alert("I'm sorry you can't make it, "+name+"!");
 		}
-		rsvpRef.on("value",function(snapshot) {
-			snapshot.forEach(function(childSnapshot) {
-			var obj = childSnapshot.val();
-			if(obj == "YES")
-			{
-				headcount++;
-			}
-			});
-		});
-		
-		rsvpRef.child("Headcount").set(headcount);
 		rsvpForm.reset();	
 	}
 	
