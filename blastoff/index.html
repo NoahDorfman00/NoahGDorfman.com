@@ -20,20 +20,32 @@
 	</script>
 	
 	<script>
+	var countRef = firebase.database().ref().child("Headcount");
+	var headcount = 0;
+	countRef.on('value', function(snapshot){
+			headcount = snapshot.val();
+	});
 	function rsvpSubmit() {
 		var name = document.getElementById("name").value;
 		var form_elements = document.getElementById("rsvpForm").elements;
 		var rsvpAnswer = form_elements['rsvp'].value;
+		var rsvpRef = firebase.database().ref();
 		
 		if (name == "" || rsvpAnswer == "")
 		{
 			window.alert("Not a valid response!");
 		}
-		else
+		else if (rsvpAnswer == "YES")
 		{
-			var firebaseRef = firebase.database().ref();
-			firebaseRef.child(name).set(rsvpAnswer);
-			window.alert(name + ": " + rsvpAnswer);
+			rsvpRef.child(name).set(rsvpAnswer);
+			countRef.set(headcount++);
+			window.alert("Thank you "+name+", I can't wait to see you!");
+		}
+		
+		else if (rsvpAnswer == "NO")
+		{
+			rsvpRef.child(name).set(rsvpAnswer);
+			window.alert("I'm sorry you can't make it, "+name+"!");
 		}
 		rsvpForm.reset();
 		
@@ -66,7 +78,6 @@
 	
 	<div>
 	<form id="rsvpForm">
-		Name:<br>
 		<input id="name" class="nameText" type="text" placeholder="Enter your name..."></input>
 		<br/>
 		<br/>
