@@ -19,17 +19,13 @@
 	firebase.initializeApp(config);
 	</script>
 	
-	<script>
-	var countRef = firebase.database().ref().child("Headcount");
-	var headcount = 0;
-	countRef.on('value', function(snapshot){
-			headcount = snapshot.val();
-	});
+	<script>	
 	function rsvpSubmit() {
 		var name = document.getElementById("name").value;
 		var form_elements = document.getElementById("rsvpForm").elements;
 		var rsvpAnswer = form_elements['rsvp'].value;
 		var rsvpRef = firebase.database().ref();
+		var headcount = 0;
 		
 		if (name == "" || rsvpAnswer == "")
 		{
@@ -38,7 +34,6 @@
 		else if (rsvpAnswer == "YES")
 		{
 			rsvpRef.child(name).set(rsvpAnswer);
-			countRef.set(headcount++);
 			window.alert("Thank you "+name+", I can't wait to see you!");
 		}
 		
@@ -47,9 +42,18 @@
 			rsvpRef.child(name).set(rsvpAnswer);
 			window.alert("I'm sorry you can't make it, "+name+"!");
 		}
-		rsvpForm.reset();
+		rsvpRef.on("value",function(snapshot) {
+			snapshot.forEach(function(childSnapshot) {
+			var obj = childSnapshot.val();
+			if(obj == "YES")
+			{
+				headcount++;
+			}
+			});
+		});
 		
-		
+		rsvpRef.child("Headcount").set(headcount);
+		rsvpForm.reset();	
 	}
 	
 	function openWinHome() {
