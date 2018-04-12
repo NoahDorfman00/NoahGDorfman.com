@@ -20,7 +20,8 @@
 	</script>
 	
 	<script>
-	var rsvpRef = firebase.database().ref();
+	var Ref = firebase.database().ref();
+	var rsvpRef = firebase.database().ref().child("Responses");
 	rsvpRef.on("value",function(snapshot) {
 		var headcount = 0;
 		snapshot.forEach(function(childSnapshot) {
@@ -30,7 +31,7 @@
 				headcount++;
 			}
 		});
-		rsvpRef.child("0 Headcount").set(headcount);
+		Ref.child("Headcount").set(headcount);
 	});
 	
 	function rsvpSubmit() {
