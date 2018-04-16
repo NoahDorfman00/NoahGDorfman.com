@@ -84,38 +84,48 @@
 	</div>
 	<br/>
 	<div class = "row">
-		<div class="columnL">
+		<div class="columnR">
 			<p><b>When?</b></p>
-			<p>July 8th, 2018 @ 11am</p>
+			<p>Brunch - July 8th, 2018 @ 11am</p>
 			<br/>
 			<div class="googleCalendar" align="center">
 				<p class = "googleCalendar"><b>Add the event to your...</b></p>
 				<a class = "googleCalendar" target="_blank" href="https://calendar.google.com/event?action=TEMPLATE&amp;tmeid=MXJrZ2ljdWU4aWhoM2k0bWY2b2twOGhxdDQgOHZkdDd1cTA1cjM4OGE4amw5dDZvZ2ZxbWNAZw&amp;tmsrc=8vdt7uq05r388a8jl9t6ogfqmc%40group.calendar.google.com"><img border="0" src="https://www.google.com/calendar/images/ext/gc_button1_en.gif"></a>
 			</div>
+			<br/>
+			<br/>
+			<br/>
+			<br/>
+			<br/>
+			<br/>
+			<form id="rsvpForm">
+				<label class="rsvpLabel"><b>Will you be in attendance?</b><br/>(submit once for each member of your party)</label>
+				<br/>
+				<br/>
+				<label class="rsvpLabel">Name:</label>
+				<input id="name" class="nameText" type="text" placeholder="Enter your name..."></input>
+				<br/>
+				<br/>
+				<input id="radioY" class="rsvpRadio" type="radio" name="rsvp" value="YES"> 
+				<label class="rsvpLabel">YES</label>
+				<input id="radioN" class="rsvpRadio" type="radio" name="rsvp" value="NO">
+				<label class="rsvpLabel">NO</label>
+				<br/>
+				<br/>
+				<input class= "buttonblast" target="submit" type="button" value="Submit" onclick="rsvpSubmit()">
+			</form>
 		</div>
-		<div class="columnR">
+		<div class="columnL">
 			<p><b>Where?</b></p>
 			<p>The Telford Inn</p>
 			<p>145 Bridgeton Pike</p>
 			<p>Mantua Township, NJ, 08051</p>
 			<p>USA, Earth</p>
+			<br/>
+			<br/>
+			<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12262.452467988132!2d-75.1727564!3d39.7932369!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xf79009cc28b1b001!2sThe+Telford+Inn!5e0!3m2!1sen!2sus!4v1523842225743" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
 		</div>
 	</div>
-	<br/>
-	<form id="rsvpForm">
-		<label class="rsvpLabel"><b>Will you be in attendance?</b><br/>(submit once for each member of your party)</label>
-		<br/>
-		<input id="name" class="nameText" type="text" placeholder="Enter your name..."></input>
-		<br/>
-		<br/>
-		<input id="radioY" class="rsvpRadio" type="radio" name="rsvp" value="YES"> 
-		<label class="rsvpLabel">YES</label>
-		<input id="radioN" class="rsvpRadio" type="radio" name="rsvp" value="NO">
-		<label class="rsvpLabel">NO</label>
-		<br/>
-		<br/>
-		<input class= "buttonblast" target="submit" type="button" value="Submit" onclick="rsvpSubmit()">
-	</form>
 	<br/>
    </center>
    </body>
