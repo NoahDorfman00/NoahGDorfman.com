@@ -447,3 +447,27 @@ p.googleCalendar
 	color: #a1a3a1;
 	font-family: courier;
 }
+
+p {
+	color: #a1a3a1;
+	font-family: courier;
+}
+
+.columnL
+{
+	float:left;
+	width: 40%;
+	padding: 10px;
+}
+.columnR
+{
+	floaT:right;
+	width: 50%;
+	padding: 10px;
+}
+
+.row:after{
+	content:"";
+	display: table;
+	clear:both;
+}

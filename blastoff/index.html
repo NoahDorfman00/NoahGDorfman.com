@@ -67,7 +67,6 @@
 		<source src="../audio/mars.mp3" type="audio/mpeg">
 	</audio>
 	<div class="header">
-		<h2 align="center">Blast Off!</h2>
 		<ul>
 			<li><input class= "buttonblast" target="home" type="button" value="Check out my personal webpage!" onclick="openWinHome()"></li>
 		</ul>
@@ -75,29 +74,49 @@
    <center>
    <div class="homespacer">
    </div>
-	<div class="image">
+   <h2>Blast off into Noah's future!</h2>
+   <p>We hope you can join us as Noah graduates to the next phase of the mission<br/>and ventures into the deep, dark unknown of college.</p>
+   <br/>
+   <div class="image">
       <img src="../images/starman.jpg" alt="starman" />
 	  <div class="shadowblast">
 	  </div>
 	</div>
+	<br/>
+	<div class = "row">
+		<div class="columnL">
+			<p><b>When?</b></p>
+			<p>July 8th, 2018 @ 11am</p>
+			<br/>
+			<div class="googleCalendar" align="center">
+				<p class = "googleCalendar"><b>Add the event to your...</b></p>
+				<a class = "googleCalendar" target="_blank" href="https://calendar.google.com/event?action=TEMPLATE&amp;tmeid=MXJrZ2ljdWU4aWhoM2k0bWY2b2twOGhxdDQgOHZkdDd1cTA1cjM4OGE4amw5dDZvZ2ZxbWNAZw&amp;tmsrc=8vdt7uq05r388a8jl9t6ogfqmc%40group.calendar.google.com"><img border="0" src="https://www.google.com/calendar/images/ext/gc_button1_en.gif"></a>
+			</div>
+		</div>
+		<div class="columnR">
+			<p><b>Where?</b></p>
+			<p>The Telford Inn</p>
+			<p>145 Bridgeton Pike</p>
+			<p>Mantua Township, NJ, 08051</p>
+			<p>USA, Earth</p>
+		</div>
+	</div>
+	<br/>
 	<form id="rsvpForm">
+		<label class="rsvpLabel"><b>Will you be in attendance?</b><br/>(submit once for each member of your party)</label>
+		<br/>
 		<input id="name" class="nameText" type="text" placeholder="Enter your name..."></input>
 		<br/>
 		<br/>
-		<label class="rsvpLabel"><b>Will you be in attendance?</b></label>
-		<br/>
 		<input id="radioY" class="rsvpRadio" type="radio" name="rsvp" value="YES"> 
-		<label class="rsvpLabel"><b>YES</b></label>
+		<label class="rsvpLabel">YES</label>
 		<input id="radioN" class="rsvpRadio" type="radio" name="rsvp" value="NO">
-		<label class="rsvpLabel"><b>NO</b></label>
+		<label class="rsvpLabel">NO</label>
 		<br/>
 		<br/>
 		<input class= "buttonblast" target="submit" type="button" value="Submit" onclick="rsvpSubmit()">
 	</form>
-	<div class="googleCalendar" align="center">
-		<p class = "googleCalendar"><b>Add the event to your...</b></p>
-		<a class = "googleCalendar" target="_blank" href="https://calendar.google.com/event?action=TEMPLATE&amp;tmeid=MXJrZ2ljdWU4aWhoM2k0bWY2b2twOGhxdDQgOHZkdDd1cTA1cjM4OGE4amw5dDZvZ2ZxbWNAZw&amp;tmsrc=8vdt7uq05r388a8jl9t6ogfqmc%40group.calendar.google.com"><img border="0" src="https://www.google.com/calendar/images/ext/gc_button1_en.gif"></a>
-	</div>
+	<br/>
    </center>
    </body>
 </html>
