@@ -120,8 +120,8 @@ ul {
 	overflow: hidden;
 }
 
-li {
-	float: left;
+li img{
+	float: right;
 }
 
 li input{
@@ -131,6 +131,7 @@ li input{
 	text-decoration: none;
 	border: none;
 	font-family: courier;
+	float: left;
 }
 
 .disable {
