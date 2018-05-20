@@ -35,7 +35,8 @@
 	});
 	
 	function rsvpSubmit() {
-		var name = document.getElementById("name").value;
+		var rawname = document.getElementById("name").value;
+		var name = rawname.toLowerCase();
 		var form_elements = document.getElementById("rsvpForm").elements;
 		var rsvpAnswer = form_elements['rsvp'].value;
 		
