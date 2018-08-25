@@ -1,5 +1,5 @@
 body {
-	background-color: black;
+	background-color: white;
 }
 .makervideo {
 	padding: 25px
@@ -31,18 +31,24 @@ h1 {
 }
 
 h2 {
-	color: #a1a3a1;
+	color: white;
 	position: absolute; 
-	top: 120px; 
-	left: 0; 
+	top: 35px;  
 	width: 100%;
+	font-size:14pt;
+}
+
+h6 {
+	color: black;
+	font-family: courier;
+	font-size: 14pt;
+
 }
 
 
 .header {
 	color: #a1a3a1;
 	display: block;
-	background-color: black;
 	width: 100%;
 	height: 100%;
 	position: relative; 
@@ -97,18 +103,9 @@ h5 {
 
 /*Earth GIF*/
 .image { 
-	position: relative; 
-	width: 500px;
-	height: 250px;
-}
-
-.shadow { 
-	position: absolute; 
-	top: 0px; 
-	left: 0;
-	width: 100%;
-	height: 100%;
-	box-shadow: 50px 50px 100px 0 black inset, -50px -50px 100px 0 black inset;
+	position: relative;
+	width: 160px;
+	height: 160px;
 }
 
 /*UI*/
@@ -118,6 +115,8 @@ ul {
 	margin: 0;
 	padding: 0;
 	overflow: hidden;
+	position:relative;
+	z-index:2;
 }
 
 li img{
@@ -134,11 +133,16 @@ li input{
 	float: left;
 }
 
+li.world{
+	display:block;
+	float:left;
+}
+
 .disable {
-	background-color: #004660;
+	background-color: #f99a77;
 	color: white;
     cursor: not-allowed;
-	border: 3px solid white;	
+	border: 3px solid #872501;	
 }
 
 .button {
@@ -152,17 +156,15 @@ li input{
 }
 
 .button:hover {
-	color:white;
-	background-color: #004660;
-	border: 3px solid #004660;
+	background-color: #872501;
+	border: 3px solid #872501;
+	color: white;
 }
 
 .dropdown-content {
     display: none;
-    position: absolute;
-	left: 70px;
-	top: 174px;
-    width: 102px;
+    position: relative;
+    float: right;
 }
 
 .dropdown-content:hover .dropdown-content {
@@ -170,7 +172,7 @@ li input{
 }
 
 .dropdown-content input {
-	width: 102px;
+	width: 91px;
 	height: 50px;
 	text-align: center;
 	text-decoration: none;
@@ -183,138 +185,68 @@ li input{
     display: block;
 }
 
+.dropdown{
+
+	width: 91px;
+	height: 350px;
+	display:block;
+	float:left;
+	float: top;
+}
+
 
 /*PROJECTS*/
 
 /*Generalities*/
 .projcontainer{
-	top: 100px;
-	height: 1000px;
-	width: 1000px;
-	position: relative;
+	height: 100%;
+	width: 100%;
+	top:170px;
+	position: absolute;
 }
 
 input.projects{
-	height: 305px;
-	width: 305px;
+	height: 257px;
+	width: 257px;
 	border-radius: 50%;
-	border: none;
 	background: none;
 	font-family: courier;
 	color: white;
-	border: 5px solid #004660;
+	border: 5px solid white;
 	position: absolute;
-	font-size: 33px;
+	font-size: 18pt;
+	left:0;
 }
 
 input.projects:focus{
 	outline: none;
 }
 
+input.projects:hover{
+	border: 5px solid black;
+}
+
 img.cover{
-	height: 300px;
-	width: 300px;
+	height: 250px;
+	width: 250px;
 	border-radius: 50%;
 	position: absolute;
+	left:0;
 	filter: blur(2px);
-	border: 5px solid #004660;
+	border: 5px solid black;
 }
 
 .container{
 	background: none;
-	height: 300px;
-	width: 300px;
-	position: absolute;	
-}
-
-/*Drone Button*/
-.dronecontainer{
-	top: 0;
-	left: 0;
-}
-
-img.drone{
-	top: 0;
-	left: 0;
-}
-
-input.drone{
-	top: 2.5px;
-	left: 2.5px;
-}
-
-/*Escape Button*/
-.escapecontainer{
-	top: 350px;
-	left: 190px;
-}
-
-img.escape{
-	top: 5px;
-	left: 155px;
-}
-
-input.escape{
-	top: 7.5px;
-	left: 157.5px;
-}
-
-/*Cake Button*/
-.cakecontainer{
-	bottom:0;
-	left:0;
-}
-
-img.cake{
-	bottom:0;
-	left:0;
-}
-
-input.cake{
-	position: absolute;
-	bottom: 2.5px;
-	left: 2.5px;
-}
-
-/*Morse Button*/
-.morsecontainer{
-	bottom:0;
-	right:0;
-}
-
-img.morse{
-	bottom:0;
-	right:0;
-}
-
-input.morse{
-	position: absolute;
-	bottom: 2.5px;
-	right: 2.5px;
-}
-
-/*Printer Button*/
-.printercontainer{
-	top:0;
-	right:0;
-}
-
-img.printer{
-	top:0;
-	right:0;
-}
-
-input.printer{
-	position: absolute;
-	top: 2.5px;
-	right: 2.5px;
+	height: 275px;
+	width: 255px;
+	position: relative;	
 }
 
 /*Slides*/
 
 .slidecontainer{
 	position: relative;
-	top: 75px;
 	height: 456px;
 	width: 456px;
 }
@@ -322,28 +254,26 @@ input.printer{
 .statementcontainer{
 	white-space: normal;
 	position: relative;
-	float: left;
 	width: 425px;
-	top: 250px;
+	float: bottom;
 }
 
 .captioncontainer{
 	white-space: normal;
 	position: relative;
-	float: right;
 	width: 425px;
-	top: 270px;	
+	float: top;
 }
 
 .aligncontainer{
-	position: relative;
-	height: 550px;
+	position: absolute;
+	height: 750px;
 	width: 100%;
+	top:170px;
 }
 
 .slides{
 	position:relative;
-	top:0;
 	border: 3px solid #a1a3a1;
 }
 

@@ -2,7 +2,6 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>The Noah Dorfman Project - Escape</title>
     <link rel="stylesheet" 
 	href="../styles/style.css">
 	<script>
@@ -76,77 +75,50 @@
   </head>
   <body onload="showPic(1)">
    <div class="header">
-		<h1 align="center">"Hello World!"</h1>
 		<ul>
+			<li class="world">
+				<div class="image">
+      			<img src="../images/world.gif" alt="world" style="width:160px;height:160px;"/>
+	    		<center>
+				<h2>The<br/>Noah Dorfman<br/>Project</h2>
+				</center>
+				</div>
+			</li>
 			<li><input class= "button" target="home" type="button" value="Home" onclick="openWinHome()"></li>
 			<div class="dropdown">
 				<li><input class= "button dropbtn" target="proj" type="button" value="Projects" onclick="openWinProject()"></li>
 				<div class="dropdown-content">
 					<input class="button" target="drone" type="button" value="Quadcopter" onclick="openWinDrone()">
 					<input class="button" target="printer" type="button" value="3-D Printer" onclick="openWinPrinter()">
-					<input class="button" target="cake" type="button" value="Galaxy Cake" onclick="openWinCake()">
 					<input class="button" target="morse" type="button" value="RPi Morse Code" onclick="openWinMorse()">
 					<input class="disable" target="escape" type="button" value="Escape Room">
+					<input class="button" target="maker" type="button" value="Maker Faire Edit" onclick="openWinMaker()">
+					<input class="button" target="cake" type="button" value="Galaxy Cake" onclick="openWinCake()">
 				</div>
-			</div>
-			<li><input class="button" target="maker" type="button" value="Maker Faire Edit" onclick="openWinMaker()"></li>
-			<li><input class= "button" target="rec" type="button" value="Recommendations" onclick="openWinRecommend()"></li>
-			<li><input class= "button" target="cont" type="button" value="Me" onclick="openWinContact()"></li>
+			</div>			
+			<!--<li><input class= "button" target="rec" type="button" value="Recommendations" onclick="openWinRecommend()"></li>
+			<li><input class= "button" target="cont" type="button" value="Me" onclick="openWinContact()"></li>-->
 		</ul>
 	</div>
-	<center>	
+	<center>
+	<div class="aligncontainer">	
 		<div class="captioncontainer">
-			<p class="captions">Escape Room<br/>
+			<p class="captions">Escape Room
 								South Jersey</p>
-			<p class="captions">Demonstrating a Pull-Down<br/>
+			<p class="captions">Demonstrating a Pull-Down
 								Circuit at the Escape Room</p>
-			<p class="captions">Producing Permanent<br/>
+			<p class="captions">Producing Permanent
 								Pull-Down Circuits</p>
-			<p class="captions">Buttons and Sensors<br/>
+			<p class="captions">Buttons and Sensors
 								Connected to Arduino</p>
-			<p class="captions">Arduino Software<br/>
+			<p class="captions">Arduino Software
 								Developed By Noah Dorfman</p>
-			<p class="captions">Ben Franklin's Workshop<br/>
+			<p class="captions">Ben Franklin's Workshop
 								Printing Press Puzzle</p>
-			<p class="captions">Jersey Devil's Cabin<br/>
+			<p class="captions">Jersey Devil's Cabin
 								Start Sensor</p>
-			<p class="captions">Electronic Puzzle<br/>
+			<p class="captions">Electronic Puzzle
 								Montage</p>
-		</div>
-		<div class="statementcontainer">
-			<p class="statements">While in the Glassboro Public  library maker<br/>
-								  space, I met the owners of Escape Room South<br/>
-								  Jersey who were having multiple electronic<br/>
-								  challenges regarding circuitry. After a brief<br/>
-								  conversation, I was asked to join the team.</p>
-			<p class="statements">This is the primary circuit I was brought on board to build.<br/>
-								  A button pull-down circuit is used to regulate inputs<br/>
-								  solely to on and off signals. This simple circuit<br/>
-								  is the cornerstone of all the work I have done for the escape room.</p>
-			<p class="statements">Throughout my time at Escape Room South Jersey, I have built<br/>
-								  in excess of 20 of these pull-down circuits to connect puzzle<br/>
-								  sensors to the Escape Room Master Program. This task<br/>
-								  has greatly refined my soldering skills.</p>
-			<p class="statements">For various puzzles, certain sensors are<br/>
-								  used to advance through the escape room game.<br/>
-								  These sensors transmit electrical data through the circuit<br/>
-								  to the Arduino microcontroller to manipulate software.</p>
-			<p class="statements">Reading the input data from Arduino's I/O pins<br/>
-								  the custom developed software wirelessly communicates<br/>
-								  commands to the Escape Room Master program.<br/>
-								  These commands trigger events in the game.</p>
-			<p class="statements">For example: the printing press combinational<br/>
-								  lock uses the input of four buttons in a specific<br/>
-								  order to trigger a solenoid lock. This opens<br/>
-								  a hatch to reveal a key for the next puzzle.</p>
-			<p class="statements">Additional example: each room uses a Reed switch<br/>
-								  to activate the commencement sequence for the game.<br/>
-								  Pictured here, the Jersey Devil's Cabin room<br/>
-								  start switch is tucked into the facade.</p>
-			<p class="statements">In this short clip, demonstrations of several switch<br/>
-								  implementations are shown. Franklin's Workshop Printing<br/>
-								  Press Lock as well as End Switch, and Jersey Devil's Cabin<br/>
-								  Start Switch as well as End Idol Construction Puzzle.</p>
 		</div>
 		<div class="slidecontainer">
 			<img class="tall slides" src="../images/escape/escape1.jpg">
@@ -160,6 +132,42 @@
 			<input class="button left" type="button" value="<" onclick="nextPic(-1)">
 			<input class="button right" type="button" value=">" onclick="nextPic(1)">
 		</div>
+		<div class="statementcontainer">
+			<p class="statements">While in the Glassboro Public  library maker
+								  space, I met the owners of Escape Room South
+								  Jersey who were having multiple electronic
+								  challenges regarding circuitry. After a brief
+								  conversation, I was asked to join the team.</p>
+			<p class="statements">This is the primary circuit I was brought on board to build.
+								  A button pull-down circuit is used to regulate inputs
+								  solely to on and off signals. This simple circuit
+								  is the cornerstone of all the work I have done for the escape room.</p>
+			<p class="statements">Throughout my time at Escape Room South Jersey, I have built
+								  in excess of 20 of these pull-down circuits to connect puzzle
+								  sensors to the Escape Room Master Program. This task
+								  has greatly refined my soldering skills.</p>
+			<p class="statements">For various puzzles, certain sensors are
+								  used to advance through the escape room game.
+								  These sensors transmit electrical data through the circuit
+								  to the Arduino microcontroller to manipulate software.</p>
+			<p class="statements">Reading the input data from Arduino's I/O pins
+								  the custom developed software wirelessly communicates
+								  commands to the Escape Room Master program.
+								  These commands trigger events in the game.</p>
+			<p class="statements">For example: the printing press combinational
+								  lock uses the input of four buttons in a specific
+								  order to trigger a solenoid lock. This opens
+								  a hatch to reveal a key for the next puzzle.</p>
+			<p class="statements">Additional example: each room uses a Reed switch
+								  to activate the commencement sequence for the game.
+								  Pictured here, the Jersey Devil's Cabin room
+								  start switch is tucked into the facade.</p>
+			<p class="statements">In this short clip, demonstrations of several switch
+								  implementations are shown. Franklin's Workshop Printing
+								  Press Lock as well as End Switch, and Jersey Devil's Cabin
+								  Start Switch as well as End Idol Construction Puzzle.</p>
+		</div>
+	</div>
 	</center>
    </body>
 

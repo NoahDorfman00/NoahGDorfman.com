@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <title>The Noah Dorfman Project - Projects</title>
-    <link rel="stylesheet" 
+    <meta charset="utf-8">  
+	<link rel="stylesheet" 
     href="../styles/style.css">
 	<script>
 	function openWinHome() {
@@ -40,16 +39,24 @@
   </head>
   <body>
    <div class="header">
-		<h1 align="center">"Hello World!"</h1>
 		<ul>
+			<li class="world">
+				<div class="image">
+      			<img src="../images/world.gif" alt="world" style="width:160px;height:160px;"/>
+	    		<center>
+				<h2>The<br/>Noah Dorfman<br/>Project</h2>
+				</center>
+				</div>
+			</li>
 			<li><input class= "button" target="home" type="button" value="Home" onclick="openWinHome()"></li>
-			<li><input class= "disable dropbtn" target="proj" type="button" value="Projects"></li>
-			<li><input class="button" target="maker" type="button" value="Maker Faire Edit" onclick="openWinMaker()"></li>
-			<li><input class= "button" target="rec" type="button" value="Recommendations" onclick="openWinRecommend()"></li>
-			<li><input class= "button" target="cont" type="button" value="Me" onclick="openWinContact()"></li>
+			<div class="dropdown">
+				<li><input class= "disable" target="proj" type="button" value="Projects"></li>
+			</div>			
+			<!--<li><input class= "button" target="rec" type="button" value="Recommendations" onclick="openWinRecommend()"></li>
+			<li><input class= "button" target="cont" type="button" value="Me" onclick="openWinContact()"></li>-->
 		</ul>
-		<center>
 			<div class="projcontainer">
+				<center>
 				<div class="dronecontainer container">
 					<img class="drone cover" src="../images/drone/dronecover.jpg" alt="dronecover" />
 					<input class="drone projects" target="cont" type="button" value="Quadcopter" onclick="openWinDrone()">
@@ -62,18 +69,22 @@
 					<img class="printer cover" src="../images/printer/printercover.jpg" alt="printercover" />
 					<input class="printer projects"  target="cont" type="button" value="3-D Printer" onclick="openWinPrinter()">
 				</div>
-				<div class="cakecontainer container">
-					<img class="cake cover" src="../images/cake/cakecover.jpg" alt="cakecover" />
-					<input class="cake projects"  target="cont" type="button" value="Galaxy Cake" onclick="openWinCake()">
-				</div>
 				<div class="morsecontainer container">
 					<img class="morse cover" src="../images/morse/morsecover.jpg" alt="morsecover" />
 					<input class="morse projects"  target="cont" type="button" value="RPi Morse Code" onclick="openWinMorse()">
 				</div>
+				<div class="cakecontainer container">
+					<img class="cake cover" src="../images/cake/cakecover.jpg" alt="cakecover" />
+					<input class="cake projects"  target="cont" type="button" value="Galaxy Cake" onclick="openWinCake()">
+				</div>
+				<div class="makercontainer container">
+					<img class="maker cover" src="../images/makerfaire/makerfairecover.png" alt="makercover" />
+					<input class="maker projects"  target="cont" type="button" value="Maker Faire Edit" onclick="openWinMaker()">
+				</div>
+				</center>
 			</div>
 			<div class="projspacer">
 			</div>
-		</center>
 	</div>
    </body>
 

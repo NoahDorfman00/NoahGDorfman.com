@@ -2,7 +2,6 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>The Noah Dorfman Project - Cake</title>
     <link rel="stylesheet" 
     href="../styles/style.css">
 	<script>
@@ -76,59 +75,44 @@
   </head>
   <body onload="showPic(1)">
    <div class="header">
-		<h1 align="center">"Hello World!"</h1>
 		<ul>
+			<li class="world">
+				<div class="image">
+      			<img src="../images/world.gif" alt="world" style="width:160px;height:160px;"/>
+	    		<center>
+				<h2>The<br/>Noah Dorfman<br/>Project</h2>
+				</center>
+				</div>
+			</li>
 			<li><input class= "button" target="home" type="button" value="Home" onclick="openWinHome()"></li>
 			<div class="dropdown">
 				<li><input class= "button dropbtn" target="proj" type="button" value="Projects" onclick="openWinProject()"></li>
 				<div class="dropdown-content">
 					<input class="button" target="drone" type="button" value="Quadcopter" onclick="openWinDrone()">
 					<input class="button" target="printer" type="button" value="3-D Printer" onclick="openWinPrinter()">
-					<input class="disable" target="cake" type="button" value="Galaxy Cake">
 					<input class="button" target="morse" type="button" value="RPi Morse Code" onclick="openWinMorse()">
 					<input class="button" target="escape" type="button" value="Escape Room" onclick="openWinEscape()">
+					<input class="button" target="maker" type="button" value="Maker Faire Edit" onclick="openWinMaker()">
+					<input class="disable" target="cake" type="button" value="Galaxy Cake">
 				</div>
-			</div>
-			<li><input class="button" target="maker" type="button" value="Maker Faire Edit" onclick="openWinMaker()"></li>
-			<li><input class= "button" target="rec" type="button" value="Recommendations" onclick="openWinRecommend()"></li>
-			<li><input class= "button" target="cont" type="button" value="Me" onclick="openWinContact()"></li>
+			</div>			
+			<!--<li><input class= "button" target="rec" type="button" value="Recommendations" onclick="openWinRecommend()"></li>
+			<li><input class= "button" target="cont" type="button" value="Me" onclick="openWinContact()"></li>-->
 		</ul>
 	</div>
-	<center>	
+	<center>
+	<div class="aligncontainer">	
 		<div class="captioncontainer">
-			<p class="captions">Mirror Glaze Galaxy Cake With<br/>
+			<p class="captions">Mirror Glaze Galaxy Cake With
 								Chocolate Chip Cookie Dough Filling</p>
-			<p class="captions">Galaxy Themed<br/>
+			<p class="captions">Galaxy Themed
 								Mirror Glaze</p>
-			<p class="captions">Painting the Galaxy<br/>
+			<p class="captions">Painting the Galaxy
 								with Stars and Final Touches</p>
-			<p class="captions">Happy 17th<br/>
+			<p class="captions">Happy 17th
 								Birthday to Me</p>
-			<p class="captions">Blowing Out My Candles<br/>
+			<p class="captions">Blowing Out My Candles
 								with My Great Grandfather</p>
-		</div>
-		<div class="statementcontainer">
-			<p class="statements">The cake is built on a basic vanilla batter<br/>
-								  recipe. It is held together with homemade,<br/>
-								  eggless chocalate chip cookie dough filling.<br/>
-								  The layers were colored with blue and purle<br/>
-								  edible food coloring to match the theme.</p>
-			<p class="statements">The glaze is made with a mixture of white chocolate,<br/>
-								  corn syrup, condensed milk, and gelatin to give<br/>
-								  the desired mirror effect. The glaze was separated<br/>
-								  and dyed five different colors.</p>
-			<p class="statements">The mirror glazes were poured on incrementally and swirled<br/>
-								  to give a galactic effect. Black disco dust was<br/>
-								  sprinkled on to resemble small stars. Finally, larger stars<br/>
-								  and constellations were piped on using vanilla buttercream.</p>
-			<p class="statements">The cake was brought to Sunday dinner<br/>
-								  to share with family and friends.<br/>
-								  The addition of color flame candles<br/>
-								  illuminated the celebration.</p>
-			<p class="statements">My 92 year-old PopPop, "The Original Engineer",<br/>
-								  and inspiration in my life helped me<br/>
-								  wish for another successful year in the<br/>
-								  workshop.</p>
 		</div>
 		<div class="slidecontainer">
 			<img class="short slides" src="../images/cake/cake1.jpg">
@@ -139,6 +123,30 @@
 			<input class="button left" type="button" value="<" onclick="nextPic(-1)">
 			<input class="button right" type="button" value=">" onclick="nextPic(1)">
 		</div>
+		<div class="statementcontainer">
+			<p class="statements">The cake is built on a basic vanilla batter
+								  recipe. It is held together with homemade,
+								  eggless chocalate chip cookie dough filling.
+								  The layers were colored with blue and purle
+								  edible food coloring to match the theme.</p>
+			<p class="statements">The glaze is made with a mixture of white chocolate,
+								  corn syrup, condensed milk, and gelatin to give
+								  the desired mirror effect. The glaze was separated
+								  and dyed five different colors.</p>
+			<p class="statements">The mirror glazes were poured on incrementally and swirled
+								  to give a galactic effect. Black disco dust was
+								  sprinkled on to resemble small stars. Finally, larger stars
+								  and constellations were piped on using vanilla buttercream.</p>
+			<p class="statements">The cake was brought to Sunday dinner
+								  to share with family and friends.
+								  The addition of color flame candles
+								  illuminated the celebration.</p>
+			<p class="statements">My 92 year-old PopPop, "The Original Engineer",
+								  and inspiration in my life helped me
+								  wish for another successful year in the
+								  workshop.</p>
+		</div>
+	</div>
 	</center>
    </body>
 

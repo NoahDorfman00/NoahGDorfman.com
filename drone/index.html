@@ -2,7 +2,6 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>The Noah Dorfman Project - Drone</title>
     <link rel="stylesheet" 
     href="../styles/style.css">
 	<script>
@@ -76,119 +75,64 @@
   </head>
   <body onload="showPic(1)">
    <div class="header">
-		<h1 align="center">"Hello World!"</h1>
 		<ul>
+			<li class="world">
+				<div class="image">
+      			<img src="../images/world.gif" alt="world" style="width:160px;height:160px;"/>
+	    		<center>
+				<h2>The<br/>Noah Dorfman<br/>Project</h2>
+				</center>
+				</div>
+			</li>
 			<li><input class= "button" target="home" type="button" value="Home" onclick="openWinHome()"></li>
 			<div class="dropdown">
 				<li><input class= "button dropbtn" target="proj" type="button" value="Projects" onclick="openWinProject()"></li>
 				<div class="dropdown-content">
 					<input class="disable" target="drone" type="button" value="Quadcopter">
 					<input class="button" target="printer" type="button" value="3-D Printer" onclick="openWinPrinter()">
-					<input class="button" target="cake" type="button" value="Galaxy Cake" onclick="openWinCake()">
 					<input class="button" target="morse" type="button" value="RPi Morse Code" onclick="openWinMorse()">
 					<input class="button" target="escape" type="button" value="Escape Room" onclick="openWinEscape()">
+					<input class="button" target="maker" type="button" value="Maker Faire Edit" onclick="openWinMaker()">
+					<input class="button" target="cake" type="button" value="Galaxy Cake" onclick="openWinCake()">
 				</div>
-			</div>
-			<li><input class="button" target="maker" type="button" value="Maker Faire Edit" onclick="openWinMaker()"></li>
-			<li><input class= "button" target="rec" type="button" value="Recommendations" onclick="openWinRecommend()"></li>
-			<li><input class= "button" target="cont" type="button" value="Me" onclick="openWinContact()"></li>
+			</div>			
+			<!--<li><input class= "button" target="rec" type="button" value="Recommendations" onclick="openWinRecommend()"></li>
+			<li><input class= "button" target="cont" type="button" value="Me" onclick="openWinContact()"></li>-->
 		</ul>
 	</div>
 	<center>	
+	<div class="aligncontainer">
 		<div class="captioncontainer">
-			<p class="captions">Versacopter Version 2.0: Custom Rendition<br/>
+			<p class="captions">Versacopter Version 2.0: Custom Rendition
 								Design Customized and Constructed By Noah</p>
-			<p class="captions">An organized workstation makes<br/>
+			<p class="captions">An organized workstation makes
 								a productive workstation.</p>
-			<p class="captions">Power Distribution Board (PDB)<br/>
+			<p class="captions">Power Distribution Board (PDB)
 								Assembly</p>
-			<p class="captions">Frame<br/>
+			<p class="captions">Frame
 								Assembly</p>
-			<p class="captions">Carbon Fiber Boom<br/>
+			<p class="captions">Carbon Fiber Boom
 								Insertion</p>
-			<p class="captions">Brushless Motor<br/>
+			<p class="captions">Brushless Motor
 								Installation</p>
-			<p class="captions">Naze 32 Rev 6 Flight Controller<br/>
+			<p class="captions">Naze 32 Rev 6 Flight Controller
 								with Connected Leads</p>
-			<p class="captions">Electronics Plugged in Together<br/>
+			<p class="captions">Electronics Plugged in Together
 								in an "Open-Faced" Style</p>
-			<p class="captions">First Clean Flight Google Application Boot<br/>
+			<p class="captions">First Clean Flight Google Application Boot
 								and Quadcopter Software Configuration</p>
-			<p class="captions">Transmitter Binding, Sealing the Body,<br/>
+			<p class="captions">Transmitter Binding, Sealing the Body,
 								and Installing the Propellors</p>
-			<p class="captions">Finding a Fun and Safe<br/>
+			<p class="captions">Finding a Fun and Safe
 								Place to Fly</p>
-			<p class="captions">It Can<br/>
+			<p class="captions">It Can
 								Fly</p>
-			<p class="captions">Practice<br/>
+			<p class="captions">Practice
 								Makes Perfect</p>
-			<p class="captions">Video of My Versacopter V2<br/>
+			<p class="captions">Video of My Versacopter V2
 								Maiden Flight</p>
-			<p class="captions">Crashing is Part<br/>
+			<p class="captions">Crashing is Part
 								of the Experience</p>
-		</div>
-		<div class="statementcontainer">
-			<p class="statements">This custom model consists of:<br/>
-								  Naze32Rev6 Flight Controller, 3S LiPo Battery,<br/>
-								  Versacopter V2 Frame Kit from FliteTest.com,<br/>
-								  Spektrum Radio Reciever and Transmitter,<br/>
-								  and Electronics Pack E from FliteTest.com.</p>
-			<p class="statements">Tools were gathered including: soldering equipment,<br/>
-								  screwdrivers, alan wrenches, pliers, wire strippers,<br/>
-								  and electrical tape. Quadcopter parts<br/>
-								  were organized and prepared for assembly.</p>
-			<p class="statements">The XT60 battery connector was soldered to<br/>
-								  two of the largest solder pads on the PDB.<br/>
-								  The four Electronic Speed Controllers (ESC)<br/>
-								  were soldered to their respective pads.</p>
-			<p class="statements">The Delrin walls of the body were<br/>
-								  pieced together and mounted to the PDB<br/>
-								  with bolts. Four boom clamps were<br/>
-								  also loosely tightened on at this point.</p>
-			<p class="statements">The ten inch booms were snugly fit<br/>
-								  through the boom clamps. They were then<br/>
-								  measured to insure symmetry. Finally,<br/>
-								  the four boom clamps were tightened.</p>
-			<p class="statements">The motor clamps were loosely screwed to<br/>
-								  the motors, and snugly slid on the booms.<br/>
-								  The motors were alligned using a level surface<br/>
-								  to ensure even flight. Finally, screws were tightened.</p>
-			<p class="statements">All of the pins were soldered to the <br/>
-								  flight controller board. The color coded<br/>
-								  jumper leads were pressed into place and<br/>
-								  secured with foam tape to endure crashes.</p>
-			<p class="statements">The radio receiver was plugged into it's<br/>
-								  respective flight controller leads and<br/>
-								  the ESCs were plugged into their respective motors. <br/>
-								  The battery was plugged in and it booted successfully.</p>
-			<p class="statements">The Clean Flight Google application was installed<br/>
-								  and booted. The Quadcopter was plugged in<br/>
-								  via USB, flight data was configured, and<br/>
-								  gyroscopic sensors were calibrated.</p>
-			<p class="statements">Following instructions from the manual,<br/>
-								  the transmitter remote was bound to the quadcopter.<br/>
-								  The body was buttoned up with the electronics<br/>
-								  inside, and the propellors were twisted on.</p>
-			<p class="statements">The local Glassboro town square is a<br/>
-								  great place to fly. It is rarely busy,<br/>
-								  there is a lot of open space, and the ground<br/>
-								  is mostly soft grass to decrease crash damage.</p>
-			<p class="statements">The motors armed at the flick of a switch,<br/>
-								  and the propellors twirled. With increase<br/>
-								  of throttle and steadying of yaw, pitch,<br/>
-								  and roll; the drone took flight.</p>
-			<p class="statements">After some tweaked settings and a few<br/>
-								  practice flights, human error was reduced<br/>
-								  and the quadopter could fly for almost 15<br/>
-								  minutes without incident.</p>
-			<p class="statements">For the very first of the quadcopter, the<br/>
-								  radio transmitter had complete control over<br/>
-								  its movement. This, combined with weak pilot<br/>
-								  skill resulted in a crash.</p>
-			<p class="statements">After a crash into grass, the Versacopter V2<br/>
-								  has no unfixable damages. The only problems that<br/>
-								  might arise are broken propellors (cheap to replace)<br/>
-								  and unalligned motors (fixable with a wrench).</p>
 		</div>
 		<div class="slidecontainer">
 			<img class="short slides" src="../images/drone/drone1.jpeg">
@@ -209,6 +153,70 @@
 			<input class="button left" type="button" value="<" onclick="nextPic(-1)">
 			<input class="button right" type="button" value=">" onclick="nextPic(1)">
 		</div>
+		<div class="statementcontainer">
+			<p class="statements">This custom model consists of:
+								  Naze32Rev6 Flight Controller, 3S LiPo Battery,
+								  Versacopter V2 Frame Kit from FliteTest.com,
+								  Spektrum Radio Reciever and Transmitter,
+								  and Electronics Pack E from FliteTest.com.</p>
+			<p class="statements">Tools were gathered including: soldering equipment,
+								  screwdrivers, alan wrenches, pliers, wire strippers,
+								  and electrical tape. Quadcopter parts
+								  were organized and prepared for assembly.</p>
+			<p class="statements">The XT60 battery connector was soldered to
+								  two of the largest solder pads on the PDB.
+								  The four Electronic Speed Controllers (ESC)
+								  were soldered to their respective pads.</p>
+			<p class="statements">The Delrin walls of the body were
+								  pieced together and mounted to the PDB
+								  with bolts. Four boom clamps were
+								  also loosely tightened on at this point.</p>
+			<p class="statements">The ten inch booms were snugly fit
+								  through the boom clamps. They were then
+								  measured to insure symmetry. Finally,
+								  the four boom clamps were tightened.</p>
+			<p class="statements">The motor clamps were loosely screwed to
+								  the motors, and snugly slid on the booms.
+								  The motors were alligned using a level surface
+								  to ensure even flight. Finally, screws were tightened.</p>
+			<p class="statements">All of the pins were soldered to the 
+								  flight controller board. The color coded
+								  jumper leads were pressed into place and
+								  secured with foam tape to endure crashes.</p>
+			<p class="statements">The radio receiver was plugged into it's
+								  respective flight controller leads and
+								  the ESCs were plugged into their respective motors. 
+								  The battery was plugged in and it booted successfully.</p>
+			<p class="statements">The Clean Flight Google application was installed
+								  and booted. The Quadcopter was plugged in
+								  via USB, flight data was configured, and
+								  gyroscopic sensors were calibrated.</p>
+			<p class="statements">Following instructions from the manual,
+								  the transmitter remote was bound to the quadcopter.
+								  The body was buttoned up with the electronics
+								  inside, and the propellors were twisted on.</p>
+			<p class="statements">The local Glassboro town square is a
+								  great place to fly. It is rarely busy,
+								  there is a lot of open space, and the ground
+								  is mostly soft grass to decrease crash damage.</p>
+			<p class="statements">The motors armed at the flick of a switch,
+								  and the propellors twirled. With increase
+								  of throttle and steadying of yaw, pitch,
+								  and roll; the drone took flight.</p>
+			<p class="statements">After some tweaked settings and a few
+								  practice flights, human error was reduced
+								  and the quadopter could fly for almost 15
+								  minutes without incident.</p>
+			<p class="statements">For the very first of the quadcopter, the
+								  radio transmitter had complete control over
+								  its movement. This, combined with weak pilot
+								  skill resulted in a crash.</p>
+			<p class="statements">After a crash into grass, the Versacopter V2
+								  has no unfixable damages. The only problems that
+								  might arise are broken propellors (cheap to replace)
+								  and unalligned motors (fixable with a wrench).</p>
+		</div>
+	</div>
 	</center>
    </body>
 

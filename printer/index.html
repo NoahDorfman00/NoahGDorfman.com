@@ -2,7 +2,6 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>The Noah Dorfman Project - Printer</title>
     <link rel="stylesheet" 
     href="../styles/style.css">
 	<script>
@@ -76,89 +75,54 @@
   </head>
   <body onload="showPic(1)">
    <div class="header">
-		<h1 align="center">"Hello World!"</h1>
 		<ul>
+			<li class="world">
+				<div class="image">
+      			<img src="../images/world.gif" alt="world" style="width:160px;height:160px;"/>
+	    		<center>
+				<h2>The<br/>Noah Dorfman<br/>Project</h2>
+				</center>
+				</div>
+			</li>
 			<li><input class= "button" target="home" type="button" value="Home" onclick="openWinHome()"></li>
 			<div class="dropdown">
 				<li><input class= "button dropbtn" target="proj" type="button" value="Projects" onclick="openWinProject()"></li>
 				<div class="dropdown-content">
 					<input class="button" target="drone" type="button" value="Quadcopter" onclick="openWinDrone()">
-					<input class="disable" target="printer" type="button" value="3-D Printer">
-					<input class="button" target="cake" type="button" value="Galaxy Cake" onclick="openWinCake()">
+					<input class="disable" target="printer" type="button" value="3-D Printer" onclick="openWinPrinter()">
 					<input class="button" target="morse" type="button" value="RPi Morse Code" onclick="openWinMorse()">
 					<input class="button" target="escape" type="button" value="Escape Room" onclick="openWinEscape()">
+					<input class="button" target="maker" type="button" value="Maker Faire Edit" onclick="openWinMaker()">
+					<input class="button" target="cake" type="button" value="Galaxy Cake" onclick="openWinCake()">
 				</div>
-			</div>
-			<li><input class="button" target="maker" type="button" value="Maker Faire Edit" onclick="openWinMaker()"></li>
-			<li><input class= "button" target="rec" type="button" value="Recommendations" onclick="openWinRecommend()"></li>
-			<li><input class= "button" target="cont" type="button" value="Me" onclick="openWinContact()"></li>
+			</div>			
+			<!--<li><input class= "button" target="rec" type="button" value="Recommendations" onclick="openWinRecommend()"></li>
+			<li><input class= "button" target="cont" type="button" value="Me" onclick="openWinContact()"></li>-->
 		</ul>
 	</div>
-	<center>	
+	<center>
+	<div class="aligncontainer">
 		<div class="captioncontainer">
-			<p class="captions">Base Plate Frame<br/>
+			<p class="captions">Base Plate Frame
 								and Z-Axis Rods</p>
-			<p class="captions">Y-Axis Motor<br/>
+			<p class="captions">Y-Axis Motor
 								with Threaded Rod</p>
-			<p class="captions">X-Axis and<br/>
+			<p class="captions">X-Axis and
 								Y-Axis Carriage</p>
-			<p class="captions">Final Preparations Prior<br/>
+			<p class="captions">Final Preparations Prior
 								to Combining the Three Axes</p>
-			<p class="captions">Revision of<br/>
+			<p class="captions">Revision of
 								Y-Axis Design</p>
-			<p class="captions">Bring Out the Power Tools<br/>
+			<p class="captions">Bring Out the Power Tools
 								for Frame Assembly</p>
-			<p class="captions">Wooden Ladder<br/>
+			<p class="captions">Wooden Ladder
 								Frame Design</p>
-			<p class="captions">X and Y Axes<br/>
+			<p class="captions">X and Y Axes
 								Installed on Frame</p>
-			<p class="captions">Heated Printing Bed Installed<br/>
+			<p class="captions">Heated Printing Bed Installed
 								and Wires Managed</p>
-			<p class="captions">RAMPS Controller Board Installed<br/>
+			<p class="captions">RAMPS Controller Board Installed
 								with Secondary Ladder Frame</p>
-		</div>
-		<div class="statementcontainer">
-			<p class="statements">The Z-axis rod clamps were 3-D printed using<br/>
-								  my own original design. They were tightened<br/>
-								  around the two rods. The black baseplate frame<br/>
-								  was salvaged from an older 3-D printer. The frame <br/>
-								  was bolted to the clamps to create the z-axis carriage.</p>
-			<p class="statements">The threaded rod was inserted into a 3-D printed<br/>
-								  axis coupler. The opposite end of the coupler hugged<br/>
-								  the drive shaft of the stepper motor. Both ends<br/>
-								  of the coupler were tightened.</p>
-			<p class="statements">The dual purposed pieces are assembled using<br/>
-								  a mostly salvaged axis and 3-D printed pieces.<br/>
-								  A threaded hole end cap allows the axis to move vertically,<br/>
-								  while the stepper motor and belt move horizontally.</p>
-			<p class="statements">The three axis mock-ups were positioned while<br/>
-								  final estimations were made. "Measure twice,<br/>
-								  cut once" is every engineer's motto. Some minor<br/>
-								  adjustments were made to the original plans.</p>
-			<p class="statements">In structural integrity testing, flexion was<br/>
-								  observed in the threaded y-axis rod. An<br/>
-								  additional y-axis rod, motor, and coupler<br/>
-								  unit was added to the opposite side for stabalization.</p>
-			<p class="statements">Safety measures are always considered<br/>
-								  in the workshop. Safety glasses are worn<br/>
-								  and a workshop buddy is present in case of emergency.<br/>
-								  These are especially considered when using power tools.</p>
-			<p class="statements">The first part of the frame consists of two pieces of 2x2<br/>
-								  cut to the same length, with three holes bored in each to<br/>
-								  support the z and y axes. For stability, three,<br/>
-								  1x4 cross beams connected the two main, wooden rails.</p>
-			<p class="statements">The y-Axis lifting motor and threaded rod system was<br/>
-								  strategically screwed to the frame using a 3-D printed bracket.<br/>
-								  The x/y Axis carriage slid on the two support rods.<br/>
-								  Finally, the threaded y-axis rod was twisted into the carriage.</p>
-			<p class="statements">A recycled, heated print bed was nestled into the base<br/>
-								  plate frame. Its wires were run underneath the whole system<br/>
-								  and out to the side. Similarly, all of the motor<br/>
-								  and extruder wires were run down and over to the same side.</p>
-			<p class="statements">A second, wooden ladder, frame piece was built to house the<br/>
-								  printer's control board. Using 3-D printed brackets, the two frame<br/>
-								  were bolted together. All the wires were plugged into the RAMPS<br/>
-								  board and it was fastened to the bottom-most support beams.</p>
 		</div>
 		<div class="slidecontainer">
 			<img class="tall slides" src="../images/printer/printer1.jpg">
@@ -174,6 +138,50 @@
 			<input class="button left" type="button" value="<" onclick="nextPic(-1)">
 			<input class="button right" type="button" value=">" onclick="nextPic(1)">
 		</div>
+		<div class="statementcontainer">
+			<p class="statements">The Z-axis rod clamps were 3-D printed using
+								  my own original design. They were tightened
+								  around the two rods. The black baseplate frame
+								  was salvaged from an older 3-D printer. The frame 
+								  was bolted to the clamps to create the z-axis carriage.</p>
+			<p class="statements">The threaded rod was inserted into a 3-D printed
+								  axis coupler. The opposite end of the coupler hugged
+								  the drive shaft of the stepper motor. Both ends
+								  of the coupler were tightened.</p>
+			<p class="statements">The dual purposed pieces are assembled using
+								  a mostly salvaged axis and 3-D printed pieces.
+								  A threaded hole end cap allows the axis to move vertically,
+								  while the stepper motor and belt move horizontally.</p>
+			<p class="statements">The three axis mock-ups were positioned while
+								  final estimations were made. "Measure twice,
+								  cut once" is every engineer's motto. Some minor
+								  adjustments were made to the original plans.</p>
+			<p class="statements">In structural integrity testing, flexion was
+								  observed in the threaded y-axis rod. An
+								  additional y-axis rod, motor, and coupler
+								  unit was added to the opposite side for stabalization.</p>
+			<p class="statements">Safety measures are always considered
+								  in the workshop. Safety glasses are worn
+								  and a workshop buddy is present in case of emergency.
+								  These are especially considered when using power tools.</p>
+			<p class="statements">The first part of the frame consists of two pieces of 2x2
+								  cut to the same length, with three holes bored in each to
+								  support the z and y axes. For stability, three,
+								  1x4 cross beams connected the two main, wooden rails.</p>
+			<p class="statements">The y-Axis lifting motor and threaded rod system was
+								  strategically screwed to the frame using a 3-D printed bracket.
+								  The x/y Axis carriage slid on the two support rods.
+								  Finally, the threaded y-axis rod was twisted into the carriage.</p>
+			<p class="statements">A recycled, heated print bed was nestled into the base
+								  plate frame. Its wires were run underneath the whole system
+								  and out to the side. Similarly, all of the motor
+								  and extruder wires were run down and over to the same side.</p>
+			<p class="statements">A second, wooden ladder, frame piece was built to house the
+								  printer's control board. Using 3-D printed brackets, the two frame
+								  were bolted together. All the wires were plugged into the RAMPS
+								  board and it was fastened to the bottom-most support beams.</p>
+		</div>
+	</div>
 	</center>
    </body>
 
