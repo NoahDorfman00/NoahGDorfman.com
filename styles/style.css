@@ -216,6 +216,7 @@ input.projects{
 	position: absolute;
 	font-size: 18pt;
 	left:0;
+	z-index: 3;
 }
 
 input.projects:focus{
