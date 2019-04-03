@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" 
+    href="../styles/style.css">
+	<script>
+	var option;
+	var optionButtons = document.getElementsByClassName("optionButtons");
+	var currentScene = 0;
+	var scenes = [
+	["Start Scene","both", "Baldwin", "Stay Here!", "Dylan"],
+	["Baldwin Scene", "bal", "Dylan", "Stay Here!", "Start"],
+	["Dylan Scene", "dyl", "Baldwin", "Stay Here!", "Start"],
+	]
+
+	function playScene(scene){
+		currentScene = scene;
+		if(scenes[scene][1] == "dyl"){
+			document.getElementById("dyl").style.display = "inline-block";
+			document.getElementById("bal").style.display = "none";
+		}
+		else if(scenes[scene][1] == "bal"){
+			document.getElementById("bal").style.display = "inline-block";
+			document.getElementById("dyl").style.display = "none";
+		}
+		else if(scenes[scene][1] == "both"){
+			document.getElementById("bal").style.display = "inline-block";
+			document.getElementById("dyl").style.display = "inline-block";
+		}
+
+		document.getElementById("dialogue").innerHTML = scenes[scene][0]
+		for (i=0; i<3; i++){
+			optionButtons[i].value = scenes[scene][i+2];
+		}
+	}
+
+	function update(button){
+		switch(currentScene){
+			case 0:
+				switch(button){
+					case 0:
+						playScene(1);
+						break;
+					case 1:
+						playScene(0);
+						break;
+					case 2:
+						playScene(2);
+						break;
+				}
+				break;
+			case 1:
+				switch(button){
+					case 0:
+						playScene(2);
+						break;
+					case 1:
+						playScene(1);
+						break;
+					case 2:
+						playScene(0);
+						break;
+				}
+				break;
+		
+			case 2:
+				switch(button){
+					case 0:
+						playScene(1);
+						break;
+					case 1:
+						playScene(2);
+						break;
+					case 2:
+						playScene(0);
+						break;
+				}
+				break;
+		}
+	}
+
+	function openWinHome() {
+	   window.location.href = "../";
+	}
+	</script>
+
+	<title>English Dialogue Game</title>
+  </head>
+  <body onload="playScene(0)">
+   <div class="header">
+		<ul>
+			<li class="world">
+				<div class="image">
+      			<img src="../images/world.gif" alt="world" style="width:160px;height:160px;"/>
+	    		<center>
+				<h2>The<br/>Noah Dorfman<br/>Project</h2>
+				</center>
+				</div>
+			</li>
+			<li><input class= "button" target="home" type="button" value="Home" onclick="openWinHome()"></li>
+		</ul>
+	</div>
+	<center>	
+	<div class="aligncontainer">
+		<div class="gifcontainer">
+			<img class="short slides" id = "bal" src="baldwin.jpeg">
+			<img class="short slides" id = "dyl" src="dylan.jpeg">
+		</div>
+		<div class="dialoguebox">
+			<p id="dialogue">blah</p>
+		</div>
+		<input class= "optionButtons" type="button" value="1" onclick="update(0)">
+		<input class= "optionButtons" type="button" value="2" onclick="update(1)">
+		<input class= "optionButtons" type="button" value="3" onclick="update(2)">
+	</div>
+	</center>
+   </body>
+
+</html>
