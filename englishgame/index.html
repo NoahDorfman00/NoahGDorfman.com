@@ -9,9 +9,132 @@
 	var optionButtons = document.getElementsByClassName("optionButtons");
 	var currentScene = 0;
 	var scenes = [
-	["Start Scene","both", "Baldwin", "Stay Here!", "Dylan"],
-	["Baldwin Scene", "bal", "Dylan", "Stay Here!", "Start"],
-	["Dylan Scene", "dyl", "Baldwin", "Stay Here!", "Start"],
+	["A Conversation with 60s Legends","both", "Play as James Baldwin", "Play as Bob Dylan", "yes"],//0
+
+	//Dylan
+	["Choose your topic:", "dyl", "Conflict with the Media", "Perception of the Public", "yes"],//1
+	["Mr. Baldwin it really is an honor to meet you. I’ve noticed that we have quite a bit in common and I’ve wanted a chance to talk with you. You know, the media really picks both of us apart. Many times, they’ll question me like “Who have you chosen to do this interview?” They seem to believe that I need some deeper meaning behind everything I do. Why can’t I just do an interview with a music paper because I’m a musician? Do you feel like the media also attacks you? What do they come at you for?",
+		"dyl", "", "", "no"],//2
+	["I agree with you, and please, call me James. It is very common for people to attack me about my sexuality. If you’ve read any of my literature, it’s clear that I explore various intricacies of sexuality in addition to other themes like race and politics. This has led many to question my sexuality. Now, with any chance they get, they ask me to come out or what advice I would give. I believe sexuality is between a man and himself and I shouldn’t have to share publicly about it. I’ve loved some men and some women and there is no need for a label. How do you believe they attack you?",
+		"bal",
+		"Focus on Sales, Not Music",
+		"Outrage Over My Music",
+		 "yes"],//3
+	["They ask so much about money and record sales and never about the music. I can sell my records just fine without doing interviews and pushing themselves. My music speaks for itself so why would I want to be hassled? And on the off chance they do talk about the music they try to have me talk about the non-existent true meanings. I know you do have deeper meaning to your works. How does that change them inquiring about it?",
+		"dyl", "", "", "no"],//4
+	["One of the biggest rages against me was when I went electric. Many critics in the media HATED it. You know, I’m just making the music that speaks to me. I’m not trying to meet an image or make sales; I’m just doing what speaks to me. If I can’t make music that I’m passionate about, why bother?",
+		 "dyl", "", "", "no"],//5
+	["That’s an interesting question. I suppose they don’t focus on critiquing or analyzing my deeper meaning too much directly to me. It’s expected to come with my work. They do however critique how I write it and include the content. Sometimes my critics say that I write too candidly and that I shouldn’t have written my book at all. I was told it was going to wreck my career.",
+		"bal",
+		"Similarities Between Us",
+		"Future Inspiration",
+		"yes"],//6
+	["I can relate to that. When I had my electric music debut, I had people tell my that I was a traitor to folk music and that I was ending my career by turning away from my fans. I just wanted to have fun and make the music that I had passion to create. I think its cool that a folk musician and an author experience such similar treatment by the media. Thanks for sharing your experience with me. I bet I’m better than the damn media!", 
+		"dyl", "", "", "no"],//7
+	["Hearing that yourself, a man I respect so much, goes through the same challenges I do with the media lights a fire in me. It must mean that I’m making good work that means something, even if that meaning isn’t set in stone. I’m going to keep on going with the flow!",
+		 "dyl", "", "", "no"],//8
+	["I’ll give you some of the best advice I’ve ever received. You have to go the way your blood beats. If you don’t live the only life you have, you won’t live some other life, you won’t live any life at all. If you are passionate about your music, disregard what others think. Make your music for the right reasons. The ones that fulfill you.",
+		"bal",
+		"Future Inspiration",
+		"Similarities Between Us",
+		"yes"],//9
+	["Thank you James. I’m really going to take that to heart. It gets hard when the media and critics are constantly telling you what your music is supposed to sound like or mean. You’re giving me motivation to keep doing my own thing and follow my passion through music.",
+		"dyl", "", "", "no"],//10
+	["Thanks for the advice, James. I think its cool that a folk musician and an author experience such similar treatment by the media. Thanks for sharing your experience with me. I bet I’m better than the damn media!", 
+		"dyl", "", "", "no"],//11
+	["Mr. Baldwin it really is an honor to meet you. I’ve noticed that we have quite a bit in common and I’ve wanted a chance to talk with you. The way I see it, the media paints us both as the figureheads of movements when neither of us are asking for that. You are painted as an author for the civil rights movement and my songs are viewed as protest songs. How do you view yourself?",
+		"dyl", "", "", "no"],//12
+	["I like to say that I am an observer. I am not a key player in the events at hand, I simply observe from a distance and offer an outside perspective on the state of the nation. Many see me as writing for the cause even though I am doing very little to call for change. I am friends with Martin and Malcolm, but they are doing and sacrificing more for the movement than I could ever dream of.",
+		"bal",
+		"Idea of an Observer",
+		"Who I Think I Am",
+		"yes"],//13
+	["That idea of an observer is very interesting to me. I like to simply write the songs that I want to write. I don’t shape my music or work around the argument of a movement, I do it for me. That seems very similar to your idea of being an observer. You aren’t really trying to change the events at hand, you are just writing about what you are seeing and analyzing them.",
+		"dyl", "", "", "no"],//14
+	["People always ask me if I think that I’m the face of these movements. If I thought I was that person, wouldn’t I be out there doing it? Wouldn’t I be, if I thought I was meant to do that, wouldn’t I be doing it? I don’t have to hold back. This Maharishi, he thinks that– right? He’s out there doing it. If I thought that, I’d be out there doing it. Don’t you … you agree, right? So obviously, I don’t think that.",
+		"dyl", "", "", "no"],//15
+	["You know Bob, you must go the way your blood beats. If you don’t live the only life you have, you won’t live some other life, you won’t live any life at all. I know the media bombards you with ideas about what music you should be making or what your songs mean but you have to always remember that you’re in this for yourself.",
+		"bal",
+		"Future Inspiration",
+		"Similarities Between Us",
+		"yes"],//16
+	["Thank you James. You’re giving me motivation to keep doing my own thing and follow my passion through music. I really appreciate you taking the time to talk to me about this. I’ve been envisioning this conversation for a long time!",
+		"dyl", "", "", "no"],//17
+	["That’s great advice, James. I think it’s cool that a folk musician and an author face such a similar crisis in our perceived roles in various movements. Thanks for sharing your experience with me.",
+		"dyl", "", "", "no"],//18
+	["I think that the idea of judging people by their actions is very valid. Like you said, if you were truly leading the charge for an organization, wouldn’t you be out there doing it? Likewise, if I was truly the face of an organization, wouldn’t I be writing pieces favoring such movements? Wouldn’t more bias be present in my work?", "bal",
+		"Agree",
+		"Question",
+		"yes"],//19
+	["I totally agree with you as I am in a very similar boat. We are both viewed as figureheads despite not carrying out the actions to back it up. I think we are more similar than we realize. Thanks for talking to me, James!",
+		"dyl", "", "", "no"],//20
+	["You know, maybe our perspectives are enough to make people shift their views about whatever we are describing. Even if we weren’t working to do so, we may still be influencing people. That might explain it. You never know with our fields; people can interpret it however they like! ",
+		"dyl", "", "", "no"],//21
+	["Is there anything else you would like to discuss?", "bal", "Conflict with the Media", "Actually, I've got to hitch a ride on a freight train.", "yes"],//22
+	["Is there anything else you would like to discuss?", "bal", "Perception by the Public", "Actually, I've got to hitch a ride on a freight train.", "yes"],//23
+
+	//Baldwin
+	["Choose your topic:", "bal", "Conflict with the Media", "Perception of the Public", "yes"],//24
+	["Well if it isn’t Bob Dylan in the flesh! You know, I’ve been meaning to get your opinion about the media. I think we both get a rough treatment from them! It is very common for people to attack me about my sexuality. If you’ve read any of my literature, it’s clear that I explore various intricacies of sexuality in addition to other themes like race and politics. This has led many to question my sexuality. Now, with any chance they get, they ask me to come out or what advice I would give. I believe sexuality is between a man and himself and I shouldn’t have to share publicly about it. I’ve loved some men and some women and there is no need for a label. Do you believe they attack you?Many times, they’ll question me like “Who have you chosen to do this interview?” They seem to believe that I need some deeper meaning behind everything I do. Why can’t I just do an interview with a music paper because I’m a musician? Do you feel like the media also attacks you? What do they come at you for?",
+		"bal", "", "", "no"],//25
+	["Many times, they’ll question me like “Who have you chosen to do this interview?” They seem to believe that I need some deeper meaning behind everything I do. Why can’t I just do an interview with a music paper because I’m a musician? Do you feel like the media also attacks you? What do they come at you for?",
+		"dyl", 
+		"Critiqued for Being Candid",
+		"Best Advice",
+		"yes"],//26
+	["That’s an interesting question. I suppose they don’t focus on critiquing or analyzing my deeper meaning too much directly to me. It’s expected to come with my work. They do however critique how I write it and include the content. Sometimes my critics say that I write too candidly and that I shouldn’t have written my book at all. I was told it was going to wreck my career. What do you feel critiqued about?",
+		"bal", "", "", "no"],//27
+	["Many times they make me feel like my passion for my work isn’t the right reason to be producing it. I’ll give you some of the best advice I’ve ever received. You have to go the way your blood beats. If you don’t live the only life you have, you won’t live some other life, you won’t live any life at all. If you are passionate about your music, disregard what others think. Make your music for the right reasons. The ones that fulfill you.",
+	"bal", "", "", "no"],//28
+	["They ask so much about money and record sales and never about the music. I can sell my records just fine without doing interviews and pushing themselves. My music speaks for itself so why would I want to be hassled? And on the off chance they do talk about the music they try to have me talk about the non-existent true meanings. I know you do have deeper meaning to your works.",
+		"dyl",
+		"Meaning of Work",
+		"Focus on the Music",
+		"yes"],//29
+	["Sometimes the meaning of a piece is best left ambiguous. It allows the reader or in your case listener to project the situation you are creating into their own lives. Art becomes so much more when you allow it to grow and reach new people that you never expected to relate to it. It’s been a pleasure talking to you, Bob!",
+		"bal", "", "", "no"],//30
+	["You know, the media will always focus on more than just the music. They need something that your music alone doesn’t provide, and that will always be the money or the official meeting or whatnot. But you need to focus on your music. That’s what you can provide.",
+		"bal", "", "", "no"],//31
+	["I’ll take that to heart. One of the biggest rages against me was when I went electric. Many critics in the media HATED it. You know, I’m just making the music that speaks to me. I’m not trying to meet an image or make sales; I’m just doing what speaks to me. If I can’t make music that I’m passionate about, why bother?",
+		"dyl",
+		"Spoken Like a Wise Man",
+		"Money",
+		"yes"],//32
+	["That sounds like the viewpoint of a wise man, Bob. I’m glad to hear that you aren’t just in the business for the spotlight. You are truly following your own ambitions and fulfilling your purpose. I respect you for that.",
+		"bal", "", "", "no"],//33
+	["The only point I could see would be for the money. However, you seem to do well for yourself by following your own path so that doesn’t seem like a big factor for you. I think you should keep sticking to the music that speaks to you and disregard the media’s wishes. Make the music that you are passionate about.",
+		"bal", "", "", "no"],//34
+	["Hey Bob! I’ve been meaning to get a chance to talk with you. We have both been painted as the figureheads of movements despite not embracing those roles. I like to say that I am an observer. I am not a key player in the events at hand, I simply observe from a distance and offer an outside perspective on the state of the nation. Many see me as writing for the cause even though I am doing very little to call for change. I am friends with Martin and Malcolm, but they are doing and sacrificing more for the movement than I could ever dream of. How do you view your involvement?",
+		"bal", "", "", "no"],//35
+	["You know, I say that I don’t write protest songs. People may find meaning in my songs or connect to what’s going on in the world, but I just write what speaks to me. The interpretation is up to the listener to interpret. I’m simply a musician, I don’t really associate with any particular movement.", 
+		"dyl",
+		"Life Advice",
+		"Judgement by Actions",
+		"yes"],//36
+	["You know Bob, you must go the way your blood beats. If you don’t live the only life you have, you won’t live some other life, you won’t live any life at all. I know the media bombards you with ideas about what music you should be making or what your songs mean but you have to always remember that you’re in this for yourself. I focus on observing situations from the outside and offering a perspective on the whole situation. I don’t associate with movements specifically.",
+		"bal", "", "", "no"],//37
+	["I think that the idea of judging people by their actions is very valid. If I was truly the face of an organization, wouldn’t I be writing pieces favoring such movements? Wouldn’t more bias be present in my work? Do you have a comparable situation to this?",
+		"bal", "", "", "no"],//38
+	["That idea of an observer is very interesting to me. I like to simply write the songs that I want to write. I don’t shape my music or work around the argument of a movement, I do it for me. That seems very similar to your idea of being an observer. You aren’t really trying to change the events at hand, you are just writing about what you are seeing and analyzing them. Where did you get the inspiration for that idea?",
+		"dyl",
+		"Just My Style",
+		"International View",
+		"yes"],//39
+	["I’ve never really questioned that before. I guess it’s just my style. I look at the world as a whole and explore what’s happening and where the actions are rooted. The term came into existence when I had to challenge the idea of me being a civil rights writer. You’re an interesting man, Bob. It was great talking to you.",
+		"bal", "", "", "no"],//40
+	["I think it probably comes from the fact that I’ve spent so much time outside of the US. With my international view, I see the differences in culture than many others don’t. I’m not directly involved in the events at hand. Like the term suggests, I simply observe them. It’s been a while since I really questioned my stance. Thanks for this conversation.",
+		"bal", "", "", "no"],//41
+	["Absolutely. People always ask me if I think that I’m the face of these movements. If I thought I was that person, wouldn’t I be out there doing it? Wouldn’t I be, if I thought I was meant to do that, wouldn’t I be doing it? I don’t have to hold back. This Maharishi, he thinks that– right? He’s out there doing it. If I thought that, I’d be out there doing it. Don’t you … you agree, right? So obviously, I don’t think that.",
+		"dyl",
+		"Agree",
+		"Ignore Other’s Expectations", 
+		"yes"],//42
+	["I agree with you completely. We are alike in that we are tied to movements for which we aren’t completing actions for. It’s yet another way we are related unexpectedly. Thanks for taking the time to share with me!",
+		"bal", "", "", "no"],//43
+	["You know Bob, the public will never understand you the way that you can. You know who you are, and so long as you focus on that, you will end up where you are supposed to. Fulfilled and happy with your life.",
+		"bal", "", "", "no"],//44
+	["What should we talk about next?", "dyl", "Conflict with the Media", "I'm heading back to Istanbul. Great talking with you.", "yes"],//45
+	["What should we talk about next?", "dyl", "Perception of the Public", "I'm heading back to Istanbul. Great talking with you.", "yes"]//46
 	]
 
 	function playScene(scene){
@@ -29,50 +152,413 @@
 			document.getElementById("dyl").style.display = "inline-block";
 		}
 
+		//Setting dialogue
 		document.getElementById("dialogue").innerHTML = scenes[scene][0]
-		for (i=0; i<3; i++){
-			optionButtons[i].value = scenes[scene][i+2];
+
+		//Setting up buttons
+		if(scenes[scene][4] == "yes"){
+			for (i=0; i<2; i++){
+				optionButtons[i].style.display = "inline-block";
+				optionButtons[i].value = scenes[scene][i+2];
+			}
+		}
+
+		else if(scenes[scene][4] == "no"){
+			optionButtons[0].style.display = "inline-block";
+			optionButtons[1].style.display = "none";
+			optionButtons[0].value = "Next";
 		}
 	}
 
 	function update(button){
 		switch(currentScene){
+			//Start
 			case 0:
 				switch(button){
 					case 0:
-						playScene(1);
+						playScene(24);
 						break;
 					case 1:
-						playScene(0);
-						break;
-					case 2:
-						playScene(2);
+						playScene(1);
 						break;
 				}
 				break;
+
+			//Dylan Tree
 			case 1:
 				switch(button){
 					case 0:
 						playScene(2);
 						break;
 					case 1:
-						playScene(1);
+						playScene(12);
 						break;
-					case 2:
+				}
+				break;
+			case 2:
+				switch(button){
+					case 0:
+						playScene(3);
+						break;
+				}
+				break;
+			case 3:
+				switch(button){
+					case 0:
+						playScene(4);
+						break;
+					case 1:
+						playScene(5);
+						break;
+				}
+				break;
+			case 4:
+				switch(button){
+					case 0:
+						playScene(6);
+						break;
+				}
+				break;
+			case 5:
+				switch(button){
+					case 0:
+						playScene(9);
+						break;
+				}
+				break;
+			case 6:
+				switch(button){
+					case 0:
+						playScene(7);
+						break;
+					case 1:
+						playScene(8);
+						break;
+				}
+				break;
+			case 7:
+				switch(button){
+					case 0:
+						playScene(23);
+						break;
+				}
+				break;
+			case 8:
+				switch(button){
+					case 0:
+						playScene(23);
+						break;
+				}
+				break;
+			case 9:
+				switch(button){
+					case 0:
+						playScene(10);
+						break;
+					case 1:
+						playScene(11);
+						break;
+				}
+				break;
+			case 10:
+				switch(button){
+					case 0:
+						playScene(23);
+						break;
+				}
+				break;
+			case 11:
+				switch(button){
+					case 0:
+						playScene(23);
+						break;
+				}
+				break;	
+			case 12:
+				switch(button){
+					case 0:
+						playScene(13);
+						break;
+				}
+				break;
+			case 13:
+				switch(button){
+					case 0:
+						playScene(14);
+						break;
+					case 1:
+						playScene(15);
+						break;
+				}
+				break;
+			case 14:
+				switch(button){
+					case 0:
+						playScene(16);
+						break;
+				}
+				break;
+			case 15:
+				switch(button){
+					case 0:
+						playScene(19);
+						break;
+				}
+				break;
+			case 16:
+				switch(button){
+					case 0:
+						playScene(17);
+						break;
+					case 1:
+						playScene(18);
+						break;
+				}
+				break;
+			case 17:
+				switch(button){
+					case 0:
+						playScene(22);
+						break;
+				}
+				break;
+			case 18:
+				switch(button){
+					case 0:
+						playScene(22);
+						break;
+				}
+				break;
+			case 19:
+				switch(button){
+					case 0:
+						playScene(20);
+						break;
+					case 1:
+						playScene(21);
+						break;
+				}
+				break;
+			case 20:
+				switch(button){
+					case 0:
+						playScene(22);
+						break;
+				}
+				break;
+			case 21:
+				switch(button){
+					case 0:
+						playScene(22);
+						break;
+				}
+				break;		
+			case 22:
+				switch(button){
+					case 0:
+						playScene(2);
+						break;
+					case 1:
 						playScene(0);
 						break;
 				}
 				break;
-		
-			case 2:
+			case 23:
 				switch(button){
 					case 0:
-						playScene(1);
+						playScene(12);
 						break;
 					case 1:
-						playScene(2);
+						playScene(0);
 						break;
-					case 2:
+				}
+				break;
+
+			//Baldwin Tree
+			case 24:
+				switch(button){
+					case 0:
+						playScene(25);
+						break;
+					case 1:
+						playScene(35);
+						break;
+				}
+				break;
+			case 25:
+				switch(button){
+					case 0:
+						playScene(26);
+						break;
+				}
+				break;
+			case 26:
+				switch(button){
+					case 0:
+						playScene(27);
+						break;
+					case 1:
+						playScene(28);
+						break;
+				}
+				break;
+			case 27:
+				switch(button){
+					case 0:
+						playScene(29);
+						break;
+				}
+				break;
+			case 28:
+				switch(button){
+					case 0:
+						playScene(32);
+						break;
+				}
+				break;
+			case 29:
+				switch(button){
+					case 0:
+						playScene(30);
+						break;
+					case 1:
+						playScene(31);
+						break;
+				}
+				break;
+			case 30:
+				switch(button){
+					case 0:
+						playScene(46);
+						break;
+				}
+				break;
+			case 31:
+				switch(button){
+					case 0:
+						playScene(46);
+						break;
+				}
+				break;
+			case 32:
+				switch(button){
+					case 0:
+						playScene(33);
+						break;
+					case 1:
+						playScene(34);
+						break;
+				}
+				break;
+			case 33:
+				switch(button){
+					case 0:
+						playScene(46);
+						break;
+				}
+				break;
+			case 34:
+				switch(button){
+					case 0:
+						playScene(46);
+						break;
+				}
+				break;	
+			case 35:
+				switch(button){
+					case 0:
+						playScene(36);
+						break;
+				}
+				break;
+			case 36:
+				switch(button){
+					case 0:
+						playScene(37);
+						break;
+					case 1:
+						playScene(38);
+						break;
+				}
+				break;
+			case 37:
+				switch(button){
+					case 0:
+						playScene(39);
+						break;
+				}
+				break;
+			case 38:
+				switch(button){
+					case 0:
+						playScene(42);
+						break;
+				}
+				break;
+			case 39:
+				switch(button){
+					case 0:
+						playScene(40);
+						break;
+					case 1:
+						playScene(41);
+						break;
+				}
+				break;
+			case 40:
+				switch(button){
+					case 0:
+						playScene(45);
+						break;
+				}
+				break;
+			case 41:
+				switch(button){
+					case 0:
+						playScene(45);
+						break;
+				}
+				break;
+			case 42:
+				switch(button){
+					case 0:
+						playScene(43);
+						break;
+					case 1:
+						playScene(44);
+						break;
+				}
+				break;
+			case 43:
+				switch(button){
+					case 0:
+						playScene(45);
+						break;
+				}
+				break;
+			case 44:
+				switch(button){
+					case 0:
+						playScene(45);
+						break;
+				}
+				break;		
+			case 45:
+				switch(button){
+					case 0:
+						playScene(25);
+						break;
+					case 1:
+						playScene(0);
+						break;
+				}
+				break;
+			case 46:
+				switch(button){
+					case 0:
+						playScene(35);
+						break;
+					case 1:
 						playScene(0);
 						break;
 				}
@@ -104,15 +590,22 @@
 	<center>	
 	<div class="aligncontainer">
 		<div class="gifcontainer">
-			<img class="short slides" id = "bal" src="baldwin.jpeg">
-			<img class="short slides" id = "dyl" src="dylan.jpeg">
+			<div class="gif" style="display: inline-block; height: 456px;
+	width: 456px;">
+				<img style = "height: 456px;
+	width: 456px;" id = "bal" src="jamesbaldwin.gif">
+			</div>
+			<div class="gif" style="display: inline-block; height: 456px;
+	width: 456px;">
+				<img style = "height: 456px;
+	width: 456px;" id = "dyl" src="bobdylan.gif">
+			</div>
 		</div>
-		<div class="dialoguebox">
+		<div class="dialoguebox" style="width: 1000px">
 			<p id="dialogue">blah</p>
 		</div>
 		<input class= "optionButtons" type="button" value="1" onclick="update(0)">
 		<input class= "optionButtons" type="button" value="2" onclick="update(1)">
-		<input class= "optionButtons" type="button" value="3" onclick="update(2)">
 	</div>
 	</center>
    </body>
