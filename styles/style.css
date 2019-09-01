@@ -163,12 +163,18 @@ li.world{
 
 .dropdown-content {
     display: none;
-    position: relative;
-    float: right;
+    width: 91px;
+	height: 300px;
+	position: relative;
+	float: bottom;
 }
 
-.dropdown-content:hover .dropdown-content {
+.dropbtn {
     display: block;
+    width: 91px;
+	height: 47px;
+	position: relative;
+	float: top;
 }
 
 .dropdown-content input {
@@ -179,6 +185,7 @@ li.world{
 	font-family: courier;
 	font-size: 12px;
 	white-space: normal;
+	display: block;
 }
 
 .dropdown:hover .dropdown-content {
@@ -186,9 +193,6 @@ li.world{
 }
 
 .dropdown{
-
-	width: 91px;
-	height: 350px;
 	display:block;
 	float:left;
 	float: top;
@@ -271,11 +275,6 @@ img.cover{
 	height: 750px;
 	width: 100%;
 	top:170px;
-}
-
-.slides{
-	position:relative;
-	border: 3px solid #a1a3a1;
 }
 
 .short{

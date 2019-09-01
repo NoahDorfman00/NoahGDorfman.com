@@ -35,6 +35,9 @@
 	function openWinCake() {
 	   window.location.href = "../cake/";
 	}
+	function openWinResume() {
+	   window.location.href = "../resume/";
+	}
 	</script>
 	<title>Home</title>
   </head>
@@ -52,20 +55,21 @@
 				</center>
 				</div>
 			</li>
-			<li><input class= "disable" target="home" type="button" value="Home"></li>
-			<div class="dropdown">
-				<li><input class= "button dropbtn" target="proj" type="button" value="Projects" onclick="openWinProject()"></li>
+			<li><input class= "disable" target="home" type="button" value="Home" onclick="openWinHome()"></li>
+				<div class="dropdown">
+				<div class="dropbtn">
+					<li><input class= "button" target="proj" type="button" value="Projects" onclick="openWinProject()"></li>
+				</div>
 				<div class="dropdown-content">
 					<input class="button" target="drone" type="button" value="Quadcopter" onclick="openWinDrone()">
 					<input class="button" target="printer" type="button" value="3-D Printer" onclick="openWinPrinter()">
 					<input class="button" target="morse" type="button" value="RPi Morse Code" onclick="openWinMorse()">
 					<input class="button" target="escape" type="button" value="Escape Room" onclick="openWinEscape()">
 					<input class="button" target="maker" type="button" value="Maker Faire Edit" onclick="openWinMaker()">
-					<input class="button" target="cake" type="button" value="Galaxy Cake" onclick="openWinCake()">
-				</div>
-			</div>			
-			<!--<li><input class= "button" target="rec" type="button" value="Recommendations" onclick="openWinRecommend()"></li>
-			<li><input class= "button" target="cont" type="button" value="Me" onclick="openWinContact()"></li>-->
+					<input class="button" target="cake" type="button" value="Galaxy Cake">
+				</div>	
+				</div>		
+			<li><input class= "button" target="resume" type="button" value="Resume" onclick="openWinResume()"></li>
 		</ul>
 	</div>
    <center>
