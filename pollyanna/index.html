@@ -32,7 +32,7 @@
 	
 	<script>
 
-	var namesRef = firebase.database().ref("/Names");
+	var namesRef = firebase.database().ref().child('Names');
 	
 	function getName() {
 
