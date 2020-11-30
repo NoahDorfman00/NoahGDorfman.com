@@ -31,21 +31,24 @@
 	</script>
 	
 	<script>
-	var formName = document.getElementById("nameIn").value;
 
-	var Ref = firebase.database().ref();
-	var namesRef = Ref.child("Names");
+	var namesRef = firebase.database().ref("/Names");
 	
 	function getName() {
 
-		window.alert("Getting name");
+		var formName = document.getElementById("nameIn").value;
+		console.log("Getting name");
+		console.log(formName);
 
-		namesRef.on("value",function(snapshot) {
+		namesRef.once("value",function(snapshot) {
 		if (snapshot.child(formName).child("Got").val()) {
 			window.alert("You already have a name!");
 		} else {
 			var notTaken = [];
 			snapshot.forEach(function(childSnapshot) {
+
+				console.log(formName + " ? " + childSnapshot.key);
+				
 				if (formName != childSnapshot.key) {
 					var taken = childSnapshot.child("Taken").val();
 					if (!taken) {
